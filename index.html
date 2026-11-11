@@ -1,0 +1,4333 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<title>Abdelrahman Fathi — AI Tools &amp; Technical Education | Portfolio</title>
+<meta content="Technical educator, creator of 262 published lectures on Malaz, TronicsHub founder, and practical AI tools portfolio: web, creative, research and workflow samples." name="description"/>
+<meta content="Abdelrahman Fathi, AI Tools, Technical Educator, Malaz, Teaching, AI-assisted Web, Portfolio, Digital Production, TronicsHub" name="keywords"/>
+<meta content="Abdelrahman Fathi Abodaif" name="author"/>
+<!-- OpenGraph / Social Sharing -->
+<meta content="website" property="og:type"/>
+<meta content="Abdelrahman Fathi — AI Tools &amp; Technical Educator" property="og:title"/>
+<meta content="Evidence-led technical education and applied AI tools portfolio: published lectures and practical digital work." property="og:description"/>
+<!-- Stylesheets -->
+<style>/**
+ * Global Design System & Foundation — "Electric Sapphire & Aurora"
+ * Ultra-Modern, Vibrant, Lively Engineering Portfolio
+ * Full Glassmorphism, Ambient Mesh Gradients, Dynamic Light/Dark
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================================================
+   THEME DESIGN TOKENS
+   ========================================================================== */
+
+:root,
+[data-theme="dark"] {
+  /* Rich, atmospheric obsidian / deep twilight — vibrant and deep, never muddy */
+  --bg-app: #070a14;
+  --bg-surface: rgba(14, 20, 36, 0.72);
+  --bg-surface-solid: #0d1322;
+  --bg-card: rgba(18, 26, 46, 0.65);
+  --bg-card-hover: rgba(25, 36, 64, 0.82);
+  --bg-card-solid: #121a2e;
+  --bg-elevated: rgba(30, 42, 74, 0.7);
+  --bg-input: #0a0f1d;
+  --bg-glass: rgba(10, 15, 29, 0.75);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-mid: rgba(255, 255, 255, 0.14);
+  --border-bright: rgba(255, 255, 255, 0.22);
+  --border-glow: rgba(56, 189, 248, 0.35);
+
+  /* Primary Brand — Electric Cyan / Sapphire */
+  --color-primary: #38bdf8;
+  --color-primary-bright: #7dd3fc;
+  --color-primary-dim: #0284c7;
+  --color-primary-glow: rgba(56, 189, 248, 0.22);
+  --color-primary-gradient: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+
+  /* Secondary Brand — Vibrant Indigo / Electric Violet */
+  --color-secondary: #818cf8;
+  --color-secondary-bright: #a5b4fc;
+  --color-secondary-glow: rgba(129, 140, 248, 0.22);
+  --color-secondary-gradient: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+
+  /* Accent Highlight — Aurora Mint / Emerald */
+  --color-accent: #34d399;
+  --color-accent-glow: rgba(52, 211, 153, 0.22);
+  --color-accent-gradient: linear-gradient(135deg, #34d399 0%, #38bdf8 100%);
+
+  /* Signal Indicators */
+  --color-signal-green: #22c55e;
+  --color-signal-amber: #fbbf24;
+  --color-signal-red: #f87171;
+
+  /* Typography Colors */
+  --text-main: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+  --text-inverse: #070a14;
+
+  /* Elevations, Soft Shadows & Neon Highlights */
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.65);
+  --shadow-glow: 0 0 32px rgba(56, 189, 248, 0.2);
+  --shadow-glow-secondary: 0 0 32px rgba(129, 140, 248, 0.2);
+
+  /* Oscilloscope Canvas Theme */
+  --scope-bg: #050811;
+  --scope-grid: rgba(56, 189, 248, 0.08);
+  --scope-signal: #38bdf8;
+  --scope-signal-alt: #818cf8;
+
+  /* Mesh Background Glows */
+  --mesh-glow-1: radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.12) 0%, transparent 45%);
+  --mesh-glow-2: radial-gradient(circle at 85% 60%, rgba(99, 102, 241, 0.12) 0%, transparent 50%);
+  --mesh-glow-3: radial-gradient(circle at 50% 90%, rgba(52, 211, 153, 0.08) 0%, transparent 40%);
+}
+
+[data-theme="light"] {
+  /* Crisp Architectural Light Canvas */
+  --bg-app: #f8fafc;
+  --bg-surface: rgba(255, 255, 255, 0.85);
+  --bg-surface-solid: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: #ffffff;
+  --bg-card-solid: #ffffff;
+  --bg-elevated: #f1f5f9;
+  --bg-input: #f1f5f9;
+  --bg-glass: rgba(255, 255, 255, 0.88);
+
+  /* Borders & Dividers */
+  --border-subtle: #e2e8f0;
+  --border-mid: #cbd5e1;
+  --border-bright: #94a3b8;
+  --border-glow: rgba(2, 132, 199, 0.3);
+
+  /* Primary Brand — Royal Oceanic Sapphire */
+  --color-primary: #0284c7;
+  --color-primary-bright: #0369a1;
+  --color-primary-dim: #075985;
+  --color-primary-glow: rgba(2, 132, 199, 0.14);
+  --color-primary-gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+
+  /* Secondary Brand — Deep Indigo / Violet */
+  --color-secondary: #6366f1;
+  --color-secondary-bright: #4f46e5;
+  --color-secondary-glow: rgba(99, 102, 241, 0.14);
+  --color-secondary-gradient: linear-gradient(135deg, #6366f1 0%, #9333ea 100%);
+
+  /* Accent Highlight — Teal Emerald */
+  --color-accent: #059669;
+  --color-accent-glow: rgba(5, 150, 105, 0.14);
+  --color-accent-gradient: linear-gradient(135deg, #059669 0%, #0284c7 100%);
+
+  /* Signal Indicators */
+  --color-signal-green: #16a34a;
+  --color-signal-amber: #d97706;
+  --color-signal-red: #dc2626;
+
+  /* Typography Colors */
+  --text-main: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-faint: #94a3b8;
+  --text-inverse: #ffffff;
+
+  /* Elevations, Soft Shadows & Highlights */
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 10px 25px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 0 24px rgba(2, 132, 199, 0.15);
+  --shadow-glow-secondary: 0 0 24px rgba(99, 102, 241, 0.15);
+
+  /* Oscilloscope Canvas Theme */
+  --scope-bg: #0f172a;
+  --scope-grid: rgba(56, 189, 248, 0.12);
+  --scope-signal: #38bdf8;
+  --scope-signal-alt: #818cf8;
+
+  /* Mesh Background Glows */
+  --mesh-glow-1: radial-gradient(circle at 15% 20%, rgba(2, 132, 199, 0.06) 0%, transparent 45%);
+  --mesh-glow-2: radial-gradient(circle at 85% 60%, rgba(99, 102, 241, 0.06) 0%, transparent 50%);
+  --mesh-glow-3: radial-gradient(circle at 50% 90%, rgba(5, 150, 105, 0.05) 0%, transparent 40%);
+}
+
+/* ==========================================================================
+   COMMON VARIABLES & ROOT
+   ========================================================================== */
+
+:root {
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-arabic: 'IBM Plex Sans Arabic', sans-serif;
+
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* Atmospheric Ambient Background Mesh (Lively & Non-distracting) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--mesh-glow-1), var(--mesh-glow-2), var(--mesh-glow-3);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+/* Subtle PCB Dot-Grid Pattern */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="light"] body::after {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+}
+
+/* App Wrapper to keep content above ambient canvas */
+.site-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); }
+h3 { font-size: clamp(1.2rem, 2.2vw, 1.55rem); }
+h4 { font-size: 1.1rem; }
+
+p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+code, pre, .mono {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--text-inverse);
+}
+
+/* Container Structure */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 18px;
+  }
+}
+
+/* ==========================================================================
+   FLOATING GLASSMORPHIC TOP NAVBAR
+   ========================================================================== */
+
+.site-header {
+  position: fixed;
+  top: 14px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding-inline: 20px;
+  display: flex;
+  justify-content: center;
+  transition: transform var(--transition-normal);
+}
+
+.nav-pill-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 8px 14px 8px 18px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md), 0 0 20px rgba(56, 189, 248, 0.08);
+  max-width: 1180px;
+  width: 100%;
+  transition: all var(--transition-normal);
+}
+
+.nav-pill-wrapper:hover {
+  border-color: var(--border-bright);
+}
+
+/* Brand Monogram */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-inverse);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+  box-shadow: 0 0 16px var(--color-primary-glow);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.brand-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--color-signal-green);
+  border-radius: 50%;
+  border: 2px solid var(--bg-app);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Nav Links Centered Pill */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+  color: var(--text-main);
+  background: var(--color-primary-glow);
+  color: var(--color-primary);
+}
+
+/* Actions: Theme Toggle, Lang Switch, CTA */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.icon-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-glow);
+  transform: translateY(-2px);
+}
+
+.lang-btn {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.lang-btn:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background: var(--color-secondary-glow);
+  transform: translateY(-1px);
+}
+
+/* Mobile Toggle Hamburger */
+.mobile-nav-toggle {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.mobile-nav-toggle span {
+  width: 18px;
+  height: 2px;
+  background: var(--text-main);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+/* Mobile Drawer */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 10, 20, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 999;
+  padding: 90px 24px 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-nav-item {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid transparent;
+}
+
+.mobile-nav-item:hover, .mobile-nav-item.active {
+  background: var(--color-primary-glow);
+  color: var(--color-primary);
+  border-color: var(--border-glow);
+}
+
+/* ==========================================================================
+   BUTTONS & CTAs
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 24px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--color-primary-gradient);
+  color: var(--text-inverse);
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(56, 189, 248, 0.5);
+  filter: brightness(1.08);
+}
+
+.btn-secondary {
+  background: var(--color-secondary-gradient);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(129, 140, 248, 0.35);
+  font-weight: 700;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(129, 140, 248, 0.5);
+  filter: brightness(1.08);
+}
+
+.btn-accent {
+  background: var(--color-accent-gradient);
+  color: var(--text-inverse);
+  box-shadow: 0 4px 18px rgba(52, 211, 153, 0.35);
+  font-weight: 700;
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(52, 211, 153, 0.5);
+  filter: brightness(1.08);
+}
+
+.btn-glass {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-mid);
+  color: var(--text-main);
+  backdrop-filter: blur(10px);
+}
+
+.btn-glass:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-glow);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.15);
+}
+
+.btn-sm {
+  padding: 7px 16px;
+  font-size: 0.82rem;
+}
+
+.btn-lg {
+  padding: 14px 32px;
+  font-size: 1.02rem;
+}
+
+/* ==========================================================================
+   BENTO GRID SYSTEM & CARD FOUNDATION
+   ========================================================================== */
+
+.bento-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-smooth);
+}
+
+.bento-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-bright);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+/* Section Common Structure */
+.section-wrapper {
+  padding-block: 100px 60px;
+  position: relative;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 760px;
+  margin-inline: auto;
+  margin-bottom: 56px;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-primary);
+  background: var(--color-primary-glow);
+  border: 1px solid var(--border-glow);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+  box-shadow: 0 0 16px var(--color-primary-glow);
+}
+
+.section-eyebrow.purple {
+  color: var(--color-secondary);
+  background: var(--color-secondary-glow);
+  border-color: rgba(129, 140, 248, 0.35);
+  box-shadow: 0 0 16px var(--color-secondary-glow);
+}
+
+.section-eyebrow.green {
+  color: var(--color-accent);
+  background: var(--color-accent-glow);
+  border-color: rgba(52, 211, 153, 0.35);
+  box-shadow: 0 0 16px var(--color-accent-glow);
+}
+
+.section-title {
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* ==========================================================================
+   TWEAKS FLOATING PANEL (Live Parameter Tuning as in SKILL.md)
+   ========================================================================== */
+
+.tweaks-panel {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tweaks-trigger-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-bright);
+  backdrop-filter: blur(16px);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-bounce);
+  cursor: pointer;
+}
+
+.tweaks-trigger-btn:hover {
+  transform: scale(1.1) rotate(30deg);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 24px var(--color-primary-glow);
+}
+
+.tweaks-window {
+  display: none;
+  background: var(--bg-card-solid);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  width: 290px;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 12px;
+  backdrop-filter: blur(24px);
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tweaks-window.open {
+  display: flex;
+  animation: floatUp 0.3s ease forwards;
+}
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(10px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.tweaks-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 10px;
+}
+
+.tweaks-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tweak-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tweak-label {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.palette-swatches {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.swatch-btn {
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.swatch-btn:hover {
+  transform: scale(1.08);
+}
+
+.swatch-btn.active {
+  border-color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    top: 10px;
+    padding-inline: 12px;
+  }
+
+  .nav-pill-wrapper {
+    padding: 6px 12px;
+  }
+
+  .section-wrapper {
+    padding-block: 70px 40px;
+  }
+
+  .bento-card {
+    padding: 22px;
+  }
+}
+</style>
+<style>/**
+ * UI Components — "Electric Sapphire & Aurora" Design System
+ * Interactive Bento Grid, Dynamic Oscilloscope, Vibrant Visuals
+ */
+
+/* ==========================================================================
+   1. HERO SECTION & BENTO ARCHITECTURE
+   ========================================================================== */
+
+.hero-section {
+  padding-top: 130px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.hero-bento-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Main Hero Bento Card */
+.hero-main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  position: relative;
+}
+
+.hero-main-card::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -80px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, var(--color-primary-glow) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.hero-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-signal-green);
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.28);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: 22px;
+  width: fit-content;
+}
+
+.pulse-led {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-signal-green);
+  box-shadow: 0 0 10px var(--color-signal-green);
+  animation: pulseGlow 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 10px var(--color-signal-green); }
+  50% { opacity: 0.5; transform: scale(0.85); box-shadow: 0 0 4px var(--color-signal-green); }
+}
+
+.hero-name {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  letter-spacing: -0.035em;
+}
+
+.hero-name .shimmer-text {
+  background: linear-gradient(120deg, var(--color-primary-bright) 0%, #a5b4fc 50%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-role-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-secondary-bright);
+  margin-bottom: 20px;
+  min-height: 32px;
+}
+
+.hero-role-banner::before {
+  content: "⚡";
+  font-size: 1rem;
+}
+
+.hero-bio-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 34px;
+  max-width: 600px;
+}
+
+.hero-actions-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* Metric Counter Strip inside Hero */
+.hero-metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.metric-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metric-num {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+}
+
+.metric-num.cyan { color: var(--color-primary); }
+.metric-num.purple { color: var(--color-secondary); }
+.metric-num.mint { color: var(--color-accent); }
+
+.metric-tag {
+  font-size: 0.76rem;
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   2. OSCILLOSCOPE LAB HUD BENTO CARD
+   ========================================================================== */
+
+.oscilloscope-card {
+  background: var(--scope-bg);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: var(--shadow-md), inset 0 0 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.scope-header {
+  padding: 16px 20px;
+  background: rgba(14, 20, 36, 0.8);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.scope-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.scope-mode-tabs {
+  display: flex;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+}
+
+.scope-tab-btn {
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.scope-tab-btn.active, .scope-tab-btn:hover {
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+.scope-canvas-viewport {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: var(--scope-bg);
+}
+
+#oscilloscopeCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.scope-telemetry-tray {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 14px 20px;
+  background: rgba(14, 20, 36, 0.9);
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+}
+
+.telemetry-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.telemetry-tag {
+  font-size: 0.64rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.telemetry-reading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   3. DISTINCTION & HONORS TROPHY CARDS
+   ========================================================================== */
+
+.honors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.honor-bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-xl);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.honor-bento-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-primary-gradient);
+  opacity: 0.8;
+}
+
+.honor-bento-card.purple::before {
+  background: var(--color-secondary-gradient);
+}
+
+.honor-bento-card.green::before {
+  background: var(--color-accent-gradient);
+}
+
+.honor-bento-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-bright);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.honor-top-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.honor-icon-emblem {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-glow);
+  border: 1px solid var(--border-glow);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 18px var(--color-primary-glow);
+}
+
+.honor-bento-card.purple .honor-icon-emblem {
+  background: var(--color-secondary-glow);
+  border-color: rgba(129, 140, 248, 0.35);
+  color: var(--color-secondary);
+  box-shadow: 0 0 18px var(--color-secondary-glow);
+}
+
+.honor-bento-card.green .honor-icon-emblem {
+  background: var(--color-accent-glow);
+  border-color: rgba(52, 211, 153, 0.35);
+  color: var(--color-accent);
+  box-shadow: 0 0 18px var(--color-accent-glow);
+}
+
+.honor-rank-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.honor-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.honor-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.honor-bento-card.purple .honor-tagline { color: var(--color-secondary); }
+.honor-bento-card.green .honor-tagline { color: var(--color-accent); }
+
+.honor-desc {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   4. SELECTED PROJECTS BENTO GRID & FILTER TABS
+   ========================================================================== */
+
+.projects-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  padding: 9px 22px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.filter-pill:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-pill.active {
+  background: var(--color-primary-gradient);
+  border-color: transparent;
+  color: var(--text-inverse);
+  box-shadow: 0 4px 16px var(--color-primary-glow);
+}
+
+.projects-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.project-bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.project-bento-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-bright);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.project-card-top {
+  padding: 26px 26px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.project-badge-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-secondary-glow);
+  color: var(--color-secondary-bright);
+  border: 1px solid rgba(129, 140, 248, 0.35);
+}
+
+.project-badge-tag.highlight-gold {
+  background: var(--color-primary-glow);
+  color: var(--color-primary-bright);
+  border-color: var(--border-glow);
+}
+
+.project-card-body {
+  padding: 0 26px 20px;
+  flex: 1;
+}
+
+.project-card-heading {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  color: var(--text-main);
+}
+
+.project-card-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.project-card-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.spec-chip {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.project-card-bottom {
+  padding: 14px 26px;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.project-card-bottom .arrow-icon {
+  transition: transform var(--transition-fast);
+}
+
+.project-bento-card:hover .project-card-bottom .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* ==========================================================================
+   5. PROJECT DEEP-DIVE MODAL DRAWER
+   ========================================================================== */
+
+.modal-backdrop-layer {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 7, 16, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.modal-backdrop-layer.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog-box {
+  background: var(--bg-surface-solid);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 860px;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  position: relative;
+  transform: scale(0.95) translateY(20px);
+  transition: transform var(--transition-bounce);
+}
+
+.modal-backdrop-layer.open .modal-dialog-box {
+  transform: scale(1) translateY(0);
+}
+
+.modal-top-bar {
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  background: var(--bg-surface-solid);
+  z-index: 10;
+}
+
+.modal-close-trigger {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.modal-close-trigger:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: rotate(90deg);
+}
+
+.modal-content-scroll {
+  padding: 28px;
+}
+
+.modal-architecture-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 28px;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--color-primary);
+  line-height: 1.8;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-architecture-box .box-label {
+  font-size: 0.72rem;
+  color: var(--color-secondary-bright);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.modal-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 28px;
+  font-size: 0.9rem;
+}
+
+.modal-data-table th, .modal-data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: left;
+}
+
+.modal-data-table th {
+  font-family: var(--font-mono);
+  color: var(--text-faint);
+  font-weight: 500;
+  width: 35%;
+  font-size: 0.84rem;
+}
+
+.modal-data-table td {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.modal-points-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-point-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.modal-point-item .point-bullet {
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   6. TECHNICAL SKILLS MATRIX
+   ========================================================================== */
+
+.skills-domain-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 16px;
+  margin-bottom: 36px;
+  overflow-x: auto;
+}
+
+.domain-pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.domain-pill-btn:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.domain-pill-btn.active {
+  background: var(--color-secondary-gradient);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(129, 140, 248, 0.35);
+}
+
+.skills-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.skill-chip-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 16px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.skill-chip-card:hover {
+  border-color: var(--border-bright);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-title-text {
+  font-weight: 600;
+  font-size: 0.94rem;
+  color: var(--text-main);
+}
+
+.skill-level-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-primary-bright);
+  background: var(--color-primary-glow);
+  border: 1px solid var(--border-glow);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   7. MALAZ ACADEMY HUB (262 LECTURES)
+   ========================================================================== */
+
+.malaz-banner-bento {
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 36px;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+}
+
+.malaz-stats-pills {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.malaz-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 7px 16px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.malaz-badge-pill strong {
+  color: var(--color-primary);
+}
+
+.malaz-syllabus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.syllabus-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.syllabus-card:hover {
+  border-color: var(--border-bright);
+  transform: translateY(-3px);
+}
+
+.syllabus-card-heading {
+  font-size: 1.1rem;
+  color: var(--color-secondary-bright);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.syllabus-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.syllabus-item-row {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.syllabus-item-row::before {
+  content: "→";
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   8. TRONICSHUB SERVICES GRID
+   ========================================================================== */
+
+.services-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-bento-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-bright);
+  box-shadow: var(--shadow-md), var(--shadow-glow-secondary);
+}
+
+.service-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-secondary-glow);
+  border: 1px solid rgba(129, 140, 248, 0.35);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-card-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.service-card-text {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   9. INTERACTIVE ATS MASTER CV WORKSTATION
+   ========================================================================== */
+
+.cv-workbench-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.cv-controls-toolbar {
+  padding: 16px 24px;
+  background: var(--bg-surface-solid);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cv-role-pills-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cv-role-pill-btn {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 7px 16px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  font-weight: 600;
+}
+
+.cv-role-pill-btn.active, .cv-role-pill-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-glow);
+}
+
+.cv-export-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cv-sheet-preview {
+  padding: 48px;
+  background: #ffffff;
+  color: #0f172a;
+  max-width: 900px;
+  margin: 32px auto;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  line-height: 1.65;
+}
+
+[data-theme="light"] .cv-sheet-preview {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #cbd5e1;
+}
+
+.cv-sheet-header {
+  border-bottom: 2px solid #0284c7;
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.cv-sheet-name {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.cv-sheet-title {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: #0284c7;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.cv-sheet-contact {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #475569;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.cv-sheet-section {
+  margin-bottom: 24px;
+}
+
+.cv-sheet-section-title {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  color: #0284c7;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 4px;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.cv-sheet-item {
+  margin-bottom: 16px;
+}
+
+.cv-sheet-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 700;
+  font-size: 0.96rem;
+  color: #0f172a;
+}
+
+.cv-sheet-item-sub {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.cv-sheet-bullets {
+  padding-left: 20px;
+  font-size: 0.88rem;
+  color: #334155;
+}
+
+.cv-sheet-bullets li {
+  margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   10. CONTACT SECTION & CARDS
+   ========================================================================== */
+
+.contact-bento-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+}
+
+.contact-message-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-method-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-method-card:hover {
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+  background: var(--color-primary-glow);
+}
+
+.method-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-glow);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.method-details-col {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 2px;
+}
+
+.method-label-text {
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.method-val-text {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Toast Message */
+.toast-bubble {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: var(--bg-surface-solid);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary-bright);
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-lg), 0 0 20px var(--color-primary-glow);
+  z-index: 3000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all var(--transition-smooth);
+}
+
+.toast-bubble.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 80px;
+  padding-block: 40px;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.footer-content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.86rem;
+  color: var(--text-faint);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   PRINT STYLES FOR CLEAN ATS PDF GENERATION
+   ========================================================================== */
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  body::before, body::after, .site-header, .tweaks-panel, .projects-filter-bar,
+  .hero-section, #highlights, #projects, #skills, #malaz, #tronicshub, #contact, .site-footer,
+  .cv-controls-toolbar {
+    display: none !important;
+  }
+
+  .site-wrapper {
+    display: block !important;
+  }
+
+  #cv-workstation {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .cv-workbench-card {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .cv-sheet-preview {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    border: none !important;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT QUERIES
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .honors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .malaz-banner-bento {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 96px;
+  }
+
+  .hero-metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .honors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .malaz-syllabus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-sheet-preview {
+    padding: 24px;
+  }
+}
+</style>
+<style>/**
+ * Arabic RTL Stylesheet & Typographic Overrides
+ * Fluid RTL layout adaptation for Floating Navbar, Bento Grids, and Modals
+ */
+
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font-arabic), var(--font-body);
+}
+
+html[dir="rtl"] h1, 
+html[dir="rtl"] h2, 
+html[dir="rtl"] h3, 
+html[dir="rtl"] h4,
+html[dir="rtl"] .hero-name,
+html[dir="rtl"] .section-title {
+  font-family: var(--font-arabic), var(--font-display);
+  letter-spacing: normal;
+}
+
+/* Flipped Arrows & Directional Elements */
+html[dir="rtl"] .arrow-icon,
+html[dir="rtl"] .hero-role-banner::before {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+html[dir="rtl"] .project-bento-card:hover .project-card-bottom .arrow-icon {
+  transform: scaleX(-1) translateX(-5px);
+}
+
+html[dir="rtl"] .syllabus-item-row::before {
+  content: "←";
+}
+
+html[dir="rtl"] .modal-data-table th,
+html[dir="rtl"] .modal-data-table td {
+  text-align: right;
+}
+
+html[dir="rtl"] .cv-sheet-bullets {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+html[dir="rtl"] .contact-method-card:hover {
+  transform: translateX(-4px);
+}
+
+html[dir="rtl"] .toast-bubble {
+  left: auto;
+  right: 24px;
+}
+
+html[dir="rtl"] .tweaks-panel {
+  right: auto;
+  left: 24px;
+  align-items: flex-start;
+}
+</style>
+<!-- Favicon SVG -->
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='24' fill='%23070a14'/&gt;&lt;path d='M25 50 L40 25 L55 75 L75 50' stroke='%2338bdf8' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/&gt;&lt;/svg&gt;" rel="icon"/>
+<style>/* Minimal refinements on top of the original Electric Sapphire & Aurora design system. */
+.project-bento-card { display:flex; flex-direction:column; width:100%; text-align:start; font:inherit; cursor:pointer; color:inherit; }
+.project-bento-card:focus-visible,.filter-pill:focus-visible,.scope-tab-btn:focus-visible,.cv-role-pill-btn:focus-visible {outline:2px solid var(--color-primary);outline-offset:4px;}
+.project-card-bottom { margin-top:auto; }
+.evidence-mark { width:auto; min-width:52px; font-size:1rem; padding:0 8px; font-weight:800; font-family:var(--font-mono); }
+.workflow-viewport canvas{display:block;width:100%;height:250px;}
+.workflow-panel .scope-header {flex-wrap:wrap;}
+.workflow-panel .scope-mode-tabs {flex-wrap:wrap;}
+.workflow-panel .scope-tab-btn {font-size:.60rem;letter-spacing:-.02em;padding:5px 8px;}
+.workflow-panel .telemetry-reading{font-size:.77rem;}
+.modal-summary{font-size:.95rem;color:var(--text-secondary);line-height:1.8;margin-bottom:24px;}
+.modal-heading{font-size:1.02rem;margin-bottom:12px;color:var(--color-primary);font-family:var(--font-mono);}
+.project-link{margin-top:24px;display:inline-flex;}
+.cv-keywords{display:flex;gap:7px;flex-wrap:wrap;}
+.cv-keywords span{display:inline-block;color:#155e75;background:#ecfeff;padding:4px 9px;font-size:.75rem;border-radius:5px;border:1px solid #a5f3fc;}
+.cv-sheet-preview p{color:#334155;font-size:.88rem;line-height:1.7;}
+.cv-sheet-item-head span:last-child {font-size:.82rem;color:#0284c7;}
+html[dir="rtl"] .project-bento-card{text-align:right;}
+html[dir="rtl"] .cv-sheet-preview{text-align:right;direction:rtl;}
+html[dir="rtl"] .cv-sheet-bullets{padding-right:22px;padding-left:0;}
+@media (max-width:820px){.workflow-panel .scope-header{justify-content:center;}.workflow-panel .scope-mode-tabs{justify-content:center;}.scope-telemetry-tray{gap:0;}}
+@media (max-width:480px){.hero-metrics-strip{grid-template-columns:repeat(2,1fr);gap:20px;}.workflow-panel .scope-mode-tabs{width:100%;}.workflow-panel .scope-tab-btn{flex:1;}.metric-num{font-size:1.5rem;}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;}}
+/* Original template's mobile header and nested grids need width guards. */
+@media (max-width: 680px) {
+  .site-header .nav-actions > a.btn { display:none; }
+  .nav-pill-wrapper {gap:8px;padding:7px 10px;}
+  .nav-brand {min-width:0; flex-shrink:1;}
+  .nav-brand .brand-text {min-width:0;}
+  .nav-brand .brand-name {font-size:.75rem;}
+  .nav-brand .brand-sub {font-size:.62rem;}
+  .nav-actions {gap:5px;flex-shrink:0;}
+  .lang-btn {padding:6px 8px;font-size:.66rem;}
+  .lang-btn svg{display:none;}
+  .mobile-nav-toggle {width:34px;flex:0 0 34px;}
+  .malaz-banner-bento, .contact-bento-grid {grid-template-columns:minmax(0,1fr);}
+  .malaz-banner-bento {padding:22px; gap:24px;}
+  .contact-message-card {padding:24px;}
+  .contact-bento-grid > *, .malaz-banner-bento > * {min-width:0;max-width:100%;}
+  .contact-method-card {min-width:0;}
+  .method-details-col,.method-val-text {min-width:0; overflow-wrap:anywhere;}
+  .skills-domain-tabs {max-width:100%;}
+}
+</style></head>
+<body>
+<!-- Site Layout Wrapper -->
+<div class="site-wrapper">
+<!-- =========================================================================
+         FLOATING GLASSMORPHIC TOP NAVBAR
+         ========================================================================= -->
+<header class="site-header">
+<div class="nav-pill-wrapper">
+<!-- Brand Monogram -->
+<a class="nav-brand" href="#hero">
+<div class="brand-badge">AF</div>
+<div class="brand-text" dir="ltr">
+<span class="brand-name">Abdelrahman Fathi</span>
+<span class="brand-sub">Malaz • AI Tools</span>
+</div>
+</a>
+<!-- Centered Navigation Links -->
+<nav class="nav-links">
+<a class="nav-link active" data-i18n="nav.about" href="#hero">Overview</a>
+<a class="nav-link" data-i18n="nav.highlights" href="#highlights">Evidence</a>
+<a class="nav-link" data-i18n="nav.projects" href="#projects">Selected Work</a>
+<a class="nav-link" data-i18n="nav.skills" href="#skills">Capabilities</a>
+<a class="nav-link" data-i18n="nav.malaz" href="#malaz">Education</a>
+<a class="nav-link" data-i18n="nav.tronicshub" href="#tronicshub">Value</a>
+<a class="nav-link" data-i18n="nav.cv" href="#cv-workstation">Interactive CV</a>
+<a class="nav-link" data-i18n="nav.contact" href="#contact">Contact</a>
+</nav>
+<!-- Right Quick Actions -->
+<div class="nav-actions">
+<!-- Language Toggle -->
+<button class="lang-btn" id="langToggleBtn" title="Switch Language">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14">
+<circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line>
+<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+</svg>
+<span id="langToggleLabel">العربية</span>
+</button>
+<!-- Theme Toggle -->
+<button class="icon-btn" id="themeToggleBtn" title="Toggle Dark / Light Theme">
+<svg class="theme-icon-slot" fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+</button>
+<!-- WhatsApp Primary CTA -->
+<a class="btn btn-primary btn-sm" href="https://wa.me/201067572993" rel="noopener" target="_blank">
+<svg fill="none" height="15" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="15">
+<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+</svg>
+<span data-i18n="nav.talkCta">Let's Connect</span>
+</a>
+<!-- Mobile Toggle Hamburger -->
+<button aria-label="Toggle Menu" class="mobile-nav-toggle" id="mobileNavToggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
+</header>
+<!-- Mobile Drawer Menu -->
+<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-nav-links">
+<a class="mobile-nav-item active" data-i18n="nav.about" href="#hero">Overview</a>
+<a class="mobile-nav-item" data-i18n="nav.highlights" href="#highlights">Evidence</a>
+<a class="mobile-nav-item" data-i18n="nav.projects" href="#projects">Selected Work</a>
+<a class="mobile-nav-item" data-i18n="nav.skills" href="#skills">Capabilities</a>
+<a class="mobile-nav-item" data-i18n="nav.malaz" href="#malaz">Education</a>
+<a class="mobile-nav-item" data-i18n="nav.tronicshub" href="#tronicshub">Value</a>
+<a class="mobile-nav-item" data-i18n="nav.cv" href="#cv-workstation">Interactive CV</a>
+<a class="mobile-nav-item" data-i18n="nav.contact" href="#contact">Contact</a>
+</div>
+<div style="padding-top: 20px; border-top: 1px solid var(--border-subtle); display: flex; gap: 10px;">
+<a class="btn btn-primary" href="https://wa.me/201067572993" rel="noopener" style="flex: 1;" target="_blank">
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- =========================================================================
+         MAIN APPLICATION CONTENT
+         ========================================================================= -->
+<main>
+<!-- HERO BENTO SECTION -->
+<section class="hero-section" id="hero">
+<div class="container">
+<div class="hero-bento-grid">
+<!-- Left Hero Main Card -->
+<div class="bento-card hero-main-card">
+<div>
+<div class="hero-status-pill">
+<span class="pulse-led"></span>
+<span data-i18n="hero.status">TECHNICAL EDUCATOR · AI TOOLS PRACTITIONER</span>
+</div>
+<h1 class="hero-name" dir="ltr">
+                  Abdelrahman <span class="shimmer-text">Fathi</span>
+</h1>
+<div class="hero-role-banner" id="heroSubtitleRotate">Technical Educator · 262 Published Lectures</div>
+<p class="hero-bio-lead" data-i18n="hero.bio">I combine a published teaching track record with hands-on AI-assisted digital work. From 262 technical lectures to websites, apps, productivity and engineering projects, my focus is making complex tools useful.</p>
+<div class="hero-actions-row">
+<a class="btn btn-primary" href="#projects">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+<span data-i18n="hero.viewProjectsBtn">Explore Work Samples</span>
+</a>
+<a class="btn btn-secondary" href="#cv-workstation">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+<span data-i18n="hero.viewCvBtn">Role-focused Profile</span>
+</a>
+<a class="btn btn-glass" href="#contact">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+<span data-i18n="hero.contactBtn">Contact</span>
+</a>
+</div>
+</div>
+<!-- Hero Metrics Strip -->
+<div class="hero-metrics-strip">
+<div class="metric-box">
+<span class="metric-num cyan">262</span>
+<span class="metric-tag" data-en="Published Lectures" data-i18n="metrics.lectures">Published Lectures</span>
+</div>
+<div class="metric-box">
+<span class="metric-num purple">2020</span>
+<span class="metric-tag" data-en="Teaching Since" data-i18n="metrics.since">Teaching Since</span>
+</div>
+<div class="metric-box">
+<span class="metric-num mint">10</span>
+<span class="metric-tag" data-en="Work Samples" data-i18n="metrics.samples">Work Samples</span>
+</div>
+<div class="metric-box">
+<span class="metric-num cyan">300/300</span>
+<span class="metric-tag" data-en="Graduation Project" data-i18n="metrics.grad">Graduation Project</span>
+</div>
+</div>
+</div>
+<!-- Right Digital Storage Oscilloscope HUD Card -->
+<div class="oscilloscope-card workflow-panel">
+<div class="scope-header">
+<div class="scope-badge"><span class="pulse-led" style="background:var(--color-primary);box-shadow:0 0 8px var(--color-primary)"></span><span data-i18n="hero.oscTitle">WORKFLOW EXPLORER</span></div>
+<div aria-label="Workflow examples" class="scope-mode-tabs" role="tablist">
+<button aria-selected="true" class="scope-tab-btn active" data-mode="web" role="tab" type="button">WEB</button>
+<button aria-selected="false" class="scope-tab-btn" data-mode="research" role="tab" type="button">RESEARCH</button>
+<button aria-selected="false" class="scope-tab-btn" data-mode="creative" role="tab" type="button">CREATE</button>
+<button aria-selected="false" class="scope-tab-btn" data-mode="automate" role="tab" type="button">FLOW</button>
+</div>
+</div>
+<div class="scope-canvas-viewport workflow-viewport"><canvas aria-label="Interactive illustration of workflow from input to useful output" id="workflowCanvas"></canvas></div>
+<div class="scope-telemetry-tray">
+<div class="telemetry-cell"><span class="telemetry-tag" data-i18n="hero.freq">FOCUS</span><span class="telemetry-reading" id="hudFreq">Web</span></div>
+<div class="telemetry-cell"><span class="telemetry-tag" data-i18n="hero.voltage">APPROACH</span><span class="telemetry-reading" id="hudVolt">Iterate</span></div>
+<div class="telemetry-cell"><span class="telemetry-tag" data-i18n="hero.busProtocol">OUTPUT</span><span class="telemetry-reading" id="hudBus">Working page</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DISTINCTION & HONORS SECTION -->
+<section class="section-wrapper" id="highlights">
+<div class="container">
+<div class="section-head">
+<div class="section-eyebrow" data-i18n="sections.distinctionEyebrow">Evidence &amp; Track Record</div>
+<h2 class="section-title" data-i18n="sections.distinctionTitle">Experience You Can Verify</h2>
+<p class="section-subtitle" data-i18n="sections.distinctionDesc">A public teaching record, real technical projects and recognitions that form the foundation for applying new tools.</p>
+</div>
+<div class="honors-grid" id="highlightsContainer">
+<!-- Dynamically populated by js/app.js -->
+</div>
+</div>
+</section>
+<!-- SELECTED ENGINEERING PORTFOLIO -->
+<section class="section-wrapper" id="projects">
+<div class="container">
+<div class="section-head">
+<div class="section-eyebrow purple" data-i18n="sections.projectsEyebrow">AI-Assisted Work Samples</div>
+<h2 class="section-title" data-i18n="sections.projectsTitle">What I Have Prepared &amp; Built</h2>
+<p class="section-subtitle" data-i18n="sections.projectsDesc">Selected practical outputs I have prepared using AI tools, plus an existing engineering project. Explore each card for the work and the skill it demonstrates.</p>
+</div>
+<!-- Project Filter Tabs -->
+<div class="projects-filter-bar">
+<button class="filter-pill active" data-filter="all" data-i18n="filters.all">All Work (10)</button>
+<button class="filter-pill" data-filter="web" data-i18n="filters.web">Web &amp; Apps</button>
+<button class="filter-pill" data-filter="design" data-i18n="filters.design">Visual Work</button>
+<button class="filter-pill" data-filter="productivity" data-i18n="filters.productivity">Productivity</button>
+<button class="filter-pill" data-filter="analysis" data-i18n="filters.analysis">Research</button>
+<button class="filter-pill" data-filter="engineering" data-i18n="filters.engineering">Engineering</button>
+</div>
+<div class="projects-bento-grid" id="projectsGrid">
+<!-- Dynamically populated by js/app.js -->
+</div>
+</div>
+</section>
+<!-- Project Deep-Dive Modal Drawer -->
+<div class="modal-backdrop-layer" id="projectModalBackdrop">
+<div class="modal-dialog-box" id="modalContentContainer">
+<!-- Dynamically populated on project click -->
+</div>
+</div>
+<!-- TECHNICAL SKILLS MATRIX -->
+<section class="section-wrapper" id="skills">
+<div class="container">
+<div class="section-head">
+<div class="section-eyebrow green" data-i18n="sections.skillsEyebrow">Applied Capabilities</div>
+<h2 class="section-title" data-i18n="sections.skillsTitle">The Skills Behind the Outputs</h2>
+<p class="section-subtitle" data-i18n="sections.skillsDesc">A blend of communication, digital production, structured problem-solving and a technical foundation.</p>
+</div>
+<div class="skills-domain-tabs" id="skillsTabsContainer">
+<!-- Dynamically populated by js/app.js -->
+</div>
+<div class="skills-grid-wrapper" id="skillsItemsContainer">
+<!-- Dynamically populated by js/app.js -->
+</div>
+</div>
+</section>
+<!-- MALAZ ACADEMY HUB -->
+<section class="section-wrapper" id="malaz">
+<div class="container">
+<div class="malaz-banner-bento">
+<div>
+<div class="section-eyebrow purple" data-i18n="sections.malazEyebrow">Established Teaching Experience</div>
+<h2 data-i18n="sections.malazTitle" style="font-size: 1.85rem; margin-bottom: 12px;">Malaz — 262 Published Lectures</h2>
+<p data-i18n="sections.malazDesc" style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.7;">University-level explanations in mathematics, electronics, microprocessors and control systems. These are technical lectures, not AI-training sessions.</p>
+<div class="malaz-stats-pills">
+<div class="malaz-badge-pill"><strong>262</strong> <span data-i18n="evidence.lectures">Published lectures</span></div>
+<div class="malaz-badge-pill"><strong>2020</strong> <span data-i18n="evidence.since">Channel established</span></div>
+<div class="malaz-badge-pill"><span data-i18n="evidence.subjects">Math · Electronics · Control</span></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 14px;">
+<a class="btn btn-secondary btn-lg" href="https://youtube.com/@MaLaZ00" rel="noopener" style="width: 100%;" target="_blank">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+<span data-i18n="evidence.channelLink">View published lectures @MaLaZ00</span>
+</a>
+</div>
+</div>
+<div class="malaz-syllabus-grid" id="malazCategoriesGrid">
+<!-- Dynamically populated by js/app.js -->
+</div>
+</div>
+</section>
+<!-- TRONICSHUB SERVICES -->
+<section class="section-wrapper" id="tronicshub">
+<div class="container">
+<div class="section-head">
+<div class="section-eyebrow" data-i18n="sections.tronicshubEyebrow">What I Bring</div>
+<h2 class="section-title" data-i18n="sections.tronicshubTitle">How This Experience Creates Value</h2>
+<p class="section-subtitle" data-i18n="sections.tronicshubDesc">The strongest combination is explaining demanding ideas and using digital tools to produce usable results.</p>
+</div>
+<div class="services-bento-grid" id="servicesGrid">
+<!-- Dynamically populated by js/app.js -->
+</div>
+</div>
+</section>
+<!-- INTERACTIVE ATS MASTER CV WORKSTATION -->
+<section class="section-wrapper" id="cv-workstation">
+<div class="container">
+<div class="section-head">
+<div class="section-eyebrow purple" data-i18n="sections.cvEyebrow">Professional Profile</div>
+<h2 class="section-title" data-i18n="sections.cvTitle">Interactive CV · Choose Your Focus</h2>
+<p class="section-subtitle" data-i18n="sections.cvDesc">View the same documented experience through a training, AI-production or technical lens. Copy the text or print it as PDF.</p>
+</div>
+<div class="cv-workbench-card">
+<div class="cv-controls-toolbar">
+<div class="cv-role-pills-list">
+<span data-i18n="cv.targetRole" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-faint); margin-right: 6px;">Profile Focus:</span>
+<button class="cv-role-pill-btn active" data-i18n="roles.trainer" data-role="trainer" type="button">Technical Educator</button><button class="cv-role-pill-btn" data-i18n="roles.ai" data-role="ai" type="button">AI Tools &amp; Digital Work</button><button class="cv-role-pill-btn" data-i18n="roles.tech" data-role="tech" type="button">Engineering Foundation</button><button class="cv-role-pill-btn" data-i18n="roles.master" data-role="master" type="button">Full Profile</button></div>
+<div class="cv-export-actions">
+<button class="btn btn-glass btn-sm" id="cvCopyBtn">
+<svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><rect height="13" rx="2" ry="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+<span data-i18n="cv.copyText">Copy Profile Text</span>
+</button>
+<button class="btn btn-primary btn-sm" id="cvPrintBtn">
+<svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect height="8" width="12" x="6" y="14"></rect></svg>
+<span data-i18n="cv.exportPdf">Print / Save PDF</span>
+</button>
+</div>
+</div>
+<div id="cvPaperContainer">
+<!-- Dynamically populated by js/cv-engine.js -->
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT SECTION -->
+<section class="section-wrapper" id="contact">
+<div class="container">
+<div class="section-head">
+<div class="section-eyebrow green" data-i18n="sections.contactEyebrow">Contact</div>
+<h2 class="section-title" data-i18n="sections.contactTitle">Let’s Discuss a Practical Collaboration</h2>
+<p class="section-subtitle" data-i18n="sections.contactDesc">For technical education, AI-assisted workflows, digital projects and engineering collaboration.</p>
+</div>
+<div class="contact-bento-grid">
+<div class="contact-message-card">
+<div>
+<h3 data-i18n="contactExtra.title" style="font-size: 1.6rem; margin-bottom: 14px;">Education meets practical technology.</h3>
+<p data-i18n="contactExtra.body" style="font-size: 1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 28px;">I welcome conversations about technical teaching, AI-assisted digital work, and projects that need both communication and technical depth.</p>
+</div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap;">
+<a class="btn btn-primary btn-lg" href="https://wa.me/201067572993" rel="noopener" target="_blank">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="20"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+<span>WhatsApp</span>
+</a>
+<a class="btn btn-glass btn-lg" href="mailto:abdelrahman.fathi.abodaif@gmail.com">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+<span>Email</span>
+</a>
+</div>
+</div>
+<div class="contact-options-list">
+<!-- WhatsApp / Phone -->
+<a class="contact-method-card" href="https://wa.me/201067572993" rel="noopener" target="_blank">
+<div class="method-icon-box">
+<svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+</div>
+<div class="method-details-col">
+<span class="method-label-text" data-i18n="contact.phoneTitle">Phone &amp; WhatsApp</span>
+<span class="method-val-text">+20 106 757 2993</span>
+</div>
+</a>
+<!-- Email with Click-to-copy -->
+<div class="contact-method-card" data-copy="abdelrahman.fathi.abodaif@gmail.com" style="cursor: pointer;" title="Click to copy email">
+<div class="method-icon-box">
+<svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+</div>
+<div class="method-details-col">
+<span class="method-label-text" data-i18n="contact.emailTitle">Email</span>
+<span class="method-val-text">abdelrahman.fathi.abodaif@gmail.com</span>
+</div>
+</div>
+<!-- LinkedIn -->
+<a class="contact-method-card" href="https://linkedin.com/in/abdelrahman-fathi3010/" rel="noopener" target="_blank">
+<div class="method-icon-box">
+<svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+</div>
+<div class="method-details-col">
+<span class="method-label-text" data-i18n="contact.linkedinTitle">LinkedIn</span>
+<span class="method-val-text">in/abdelrahman-fathi3010</span>
+</div>
+</a>
+<!-- GitHub -->
+<a class="contact-method-card" href="https://github.com/boOdybo" rel="noopener" target="_blank">
+<div class="method-icon-box">
+<svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+</div>
+<div class="method-details-col">
+<span class="method-label-text" data-i18n="contact.githubTitle">GitHub</span>
+<span class="method-val-text">github.com/boOdybo</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- SITE FOOTER -->
+<footer class="site-footer">
+<div class="container">
+<div class="footer-content-row">
+<div>© 2026 Abdelrahman Fathi Abodaif. <span data-i18n="footer.builtWith">Education · Technology · Practical Work.</span></div>
+<div>Malaz Academy · TronicsHub · AI Tools</div>
+</div>
+</div>
+</footer>
+<!-- =========================================================================
+         LIVE TWEAKS PANEL (As recommended in SKILL.md)
+         ========================================================================= -->
+<div class="tweaks-panel">
+<div class="tweaks-window" id="tweaksWindow">
+<div class="tweaks-head">
+<div class="tweaks-title">
+<span>⚙️</span>
+<span>Appearance</span>
+</div>
+<button id="tweaksCloseBtn" style="color: var(--text-faint); font-size: 1.1rem; line-height: 1;">×</button>
+</div>
+<div class="tweak-group">
+<span class="tweak-label">Accent color</span>
+<div class="palette-swatches">
+<button class="swatch-btn active" data-color="sapphire" style="background: linear-gradient(135deg, #38bdf8, #6366f1);" title="Electric Sapphire"></button>
+<button class="swatch-btn" data-color="emerald" style="background: linear-gradient(135deg, #34d399, #06b6d4);" title="Aurora Emerald"></button>
+<button class="swatch-btn" data-color="violet" style="background: linear-gradient(135deg, #a78bfa, #ec4899);" title="Neon Violet"></button>
+<button class="swatch-btn" data-color="rose" style="background: linear-gradient(135deg, #fb7185, #f43f5e);" title="Cyber Rose"></button>
+</div>
+</div>
+</div>
+<button class="tweaks-trigger-btn" id="tweaksTriggerBtn" title="Customize Design Parameters">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- JAVASCRIPT BUNDLE -->
+<script>/* Evidence-led portfolio data. AI work samples are owner-reported; only linked projects have verified public URLs. */
+const PORTFOLIO_DATA = {
+  "profile": {
+    "name": {
+      "en": "Abdelrahman Fathi Abodaif",
+      "ar": "عبدالرحمن فتحي أبوضيف إبراهيم"
+    },
+    "nickname": {
+      "en": "Malaz",
+      "ar": "ملاذ"
+    },
+    "title": {
+      "en": "AI Tools Practitioner & Technical Educator",
+      "ar": "ممارس أدوات الذكاء الاصطناعي ومحاضر تقني"
+    },
+    "subtitles": {
+      "en": [
+        "Technical Educator · 262 Published Lectures",
+        "AI-Assisted Digital Workflows & Creative Outputs",
+        "Founder of Malaz Academy & TronicsHub",
+        "Engineering Background · Real-World Applications"
+      ],
+      "ar": [
+        "محاضر تقني · 262 محاضرة منشورة",
+        "أعمال رقمية وتطبيقات عملية بأدوات AI",
+        "مؤسس ملاذ وTronicsHub",
+        "خلفية هندسية وتطبيقات عملية حقيقية"
+      ]
+    },
+    "location": {
+      "en": "Sohag, Egypt",
+      "ar": "سوهاج، مصر"
+    },
+    "phone": "+20 106 757 2993",
+    "email": "abdelrahman.fathi.abodaif@gmail.com",
+    "linkedin": "https://linkedin.com/in/abdelrahman-fathi3010/",
+    "linkedinUser": "abdelrahman-fathi3010",
+    "github": "https://github.com/boOdybo",
+    "githubUser": "boOdybo",
+    "youtube": "https://youtube.com/@MaLaZ00",
+    "youtubeUser": "@MaLaZ00",
+    "summary": {
+      "en": "Technical educator and hands-on AI tools practitioner. I created 262 published engineering and university-level video lectures through Malaz, founded TronicsHub, and prepared AI-assisted work samples in websites, branding, applications, research, automation and 3D. My engineering background helps connect digital tools to real technical problems.",
+      "ar": "محاضر تقني ومستخدم عملي لأدوات الذكاء الاصطناعي. أعددت ونشرت 262 محاضرة جامعية وتقنية عبر «ملاذ»، وأسست TronicsHub، وجهزت عينات أعمال باستخدام أدوات AI في المواقع والهوية البصرية والتطبيقات والبحث والأتمتة والنمذجة ثلاثية الأبعاد. تساعدني خلفيتي الهندسية على ربط الأدوات بالمشكلات التقنية الواقعية."
+    }
+  },
+  "stats": [
+    {
+      "value": "10+",
+      "label": {
+        "en": "Hardware Systems Built",
+        "ar": "أنظمة عتادية منفذة"
+      },
+      "icon": "cpu"
+    },
+    {
+      "value": "88%",
+      "label": {
+        "en": "Honors Degree (Top 3)",
+        "ar": "امتياز مع مرتبة الشرف (الـ 3)"
+      },
+      "icon": "award"
+    },
+    {
+      "value": "300/300",
+      "label": {
+        "en": "Grad Project Score",
+        "ar": "الدرجة النهائية لمشروع التخرج"
+      },
+      "icon": "check-circle"
+    },
+    {
+      "value": "262",
+      "label": {
+        "en": "Lectures on Malaz",
+        "ar": "محاضرة على قناة ملاذ"
+      },
+      "icon": "video"
+    },
+    {
+      "value": "3",
+      "label": {
+        "en": "Major Awards (Hult / ISF)",
+        "ar": "جوائز ومسابقات كبرى"
+      },
+      "icon": "zap"
+    }
+  ],
+  "education": {
+    "degree": {
+      "en": "Bachelor's Degree in Industrial Education — Electrical Technology (Electronics Division)",
+      "ar": "بكالوريوس في التعليم الصناعي — تكنولوجيا الكهرباء (شعبة الإلكترونيات)"
+    },
+    "institution": {
+      "en": "Faculty of Technology and Education, Sohag University",
+      "ar": "كلية التكنولوجيا والتعليم — جامعة سوهاج"
+    },
+    "year": "2024",
+    "grade": {
+      "en": "Excellent with Honors (88%)",
+      "ar": "ممتاز مع مرتبة الشرف (88%)"
+    },
+    "ranking": {
+      "en": "Ranked 3rd in Electronics Division | 10th College-wide",
+      "ar": "الترتيب الثالث على شعبة الإلكترونيات | العاشر على الكلية"
+    },
+    "gradProject": {
+      "name": "OptiNutri Scale",
+      "score": "300 / 300 (100% Full Score — Excellent)",
+      "en": "OptiNutri Scale — Connected Body Measurement & Personalized Nutrition Management Platform (Score: 300/300)",
+      "ar": "ميزان OptiNutri الذكي — نظام متكامل لقياس المؤشرات الحيوية والتغذية الذكية (300/300)"
+    }
+  },
+  "awards": [
+    {
+      "title": {
+        "en": "Hult Prize — 1st Place (University Level)",
+        "ar": "جائزة هلت العالمية (Hult Prize) — المركز الأول"
+      },
+      "org": {
+        "en": "Sohag University Local Summit",
+        "ar": "قمة جامعة سوهاج"
+      },
+      "year": "2024",
+      "highlight": {
+        "en": "Qualified for the Regional Stage in Thailand",
+        "ar": "التأهل للمرحلة الإقليمية في تايلاند"
+      },
+      "desc": {
+        "en": "Won 1st place across Sohag University for innovative tech solution architecture and successfully secured qualification to represent the university in the Thailand regional summit.",
+        "ar": "حصد المركز الأول على مستوى جامعة سوهاج والتأهل المباشر لتمثيل الجامعة في القمة الإقليمية الدولية في تايلاند."
+      },
+      "badge": "1st Place"
+    },
+    {
+      "title": {
+        "en": "ISF — EGP Competition Winning Team",
+        "ar": "مسابقة EGP — صندوق رعاية المبتكرين والنوابغ (ISF)"
+      },
+      "org": {
+        "en": "Egyptian Innovators Support Fund (ISF)",
+        "ar": "صندوق رعاية المبتكرين والنوابغ - وزارة التعليم العالي"
+      },
+      "year": "2024",
+      "highlight": {
+        "en": "Sole winning team from Upper Egypt",
+        "ar": "الفريق الفائز الوحيد الممثل لصعيد مصر"
+      },
+      "desc": {
+        "en": "Recognized among Egypt's top technical innovations under the prestigious national fund, standing out as the single victorious team from Upper Egypt.",
+        "ar": "التتويج ضمن أفضل الابتكارات التقنية الوطنية تحت مظلة الصندوق الحكومي المرموق كفريق فائز وحيد من الصعيد."
+      },
+      "badge": "Winner"
+    },
+    {
+      "title": {
+        "en": "ISF — IGB Competition Winning Team",
+        "ar": "مسابقة IGB — صندوق رعاية المبتكرين والنوابغ (ISF)"
+      },
+      "org": {
+        "en": "Egyptian Innovators Support Fund (ISF)",
+        "ar": "صندوق رعاية المبتكرين والنوابغ - وزارة التعليم العالي"
+      },
+      "year": "2024",
+      "highlight": {
+        "en": "Sole winning team from Upper Egypt",
+        "ar": "الفريق الفائز الوحيد الممثل لصعيد مصر"
+      },
+      "desc": {
+        "en": "Selected as a winning initiative for advanced engineering design and real-world industrial impact.",
+        "ar": "فوز مستحق في المسابقة الوطنية عن التصميم الهندسي المتقدم والقابلية للتطبيق الصناعي والريادي."
+      },
+      "badge": "Winner"
+    }
+  ],
+  "projects": [
+    {
+      "id": "portfolio",
+      "category": "web",
+      "title": {
+        "en": "Interactive Personal Portfolio",
+        "ar": "بورتفوليو شخصي تفاعلي"
+      },
+      "tagline": {
+        "en": "Web experience · HTML/CSS/JS",
+        "ar": "موقع تفاعلي · HTML/CSS/JS"
+      },
+      "summary": {
+        "en": "A complete bilingual portfolio with project filtering, detail drawers, thematic controls and a role-specific CV. An example of translating a complex brief into an actual navigable product.",
+        "ar": "بورتفوليو ثنائي اللغة يضم تصفية للمشروعات ونوافذ تفاصيل وتبديلًا للمظهر وسيرة ذاتية بحسب المسار. مثال قائم على تحويل متطلبات كثيرة إلى منتج رقمي قابل للاستخدام."
+      },
+      "outputs": {
+        "en": "Published portfolio website",
+        "ar": "بورتفوليو منشور على الويب"
+      },
+      "ability": {
+        "en": "AI-assisted ideation, interface structuring, front-end building and iterative review",
+        "ar": "توظيف أدوات AI في بلورة المتطلبات، تنظيم الواجهة، تطوير الموقع، والمراجعة التكرارية"
+      },
+      "steps": {
+        "en": "Brief → Information architecture → Interface → Functional interactions",
+        "ar": "المتطلبات ← هيكلة المحتوى ← تصميم الواجهة ← التفاعلات"
+      },
+      "link": "https://boOdybo.github.io/Portofolio/",
+      "badge": "LIVE PROJECT"
+    },
+    {
+      "id": "commerce",
+      "category": "web",
+      "title": {
+        "en": "E-Commerce Experience",
+        "ar": "تجربة متجر إلكتروني"
+      },
+      "tagline": {
+        "en": "Digital storefront",
+        "ar": "واجهة تجارة إلكترونية"
+      },
+      "summary": {
+        "en": "An e-commerce website prepared among my practical AI-tool outputs, demonstrating application beyond text generation.",
+        "ar": "موقع تجارة إلكترونية ضمن المخرجات التي أعددتها بالاستعانة بأدوات AI، يوضح القدرة على الانتقال من توليد النصوص إلى بناء تجارب رقمية."
+      },
+      "outputs": {
+        "en": "E-commerce website",
+        "ar": "موقع تجارة إلكترونية"
+      },
+      "ability": {
+        "en": "AI-assisted web-building and content organisation",
+        "ar": "بناء صفحات رقمية وتنظيم محتواها بمساعدة AI"
+      },
+      "steps": {
+        "en": "Concept → Store structure → Product presentation",
+        "ar": "الفكرة ← هيكل المتجر ← عرض المنتجات"
+      },
+      "link": null,
+      "badge": "WORK SAMPLE"
+    },
+    {
+      "id": "sites",
+      "category": "web",
+      "title": {
+        "en": "Article & Novel Websites",
+        "ar": "مواقع للمقالات والروايات"
+      },
+      "tagline": {
+        "en": "Content-rich web experiences",
+        "ar": "مواقع مرتكزة على المحتوى"
+      },
+      "summary": {
+        "en": "Two distinct website examples: one for articles and another for long-form novels, each requiring suitable structure and reading flow.",
+        "ar": "نماذج لموقع مقالات وموقع روايات، لكل منهما تنظيم مختلف للمحتوى وتجربة القراءة."
+      },
+      "outputs": {
+        "en": "Article website + novel website",
+        "ar": "موقع مقالات + موقع روايات"
+      },
+      "ability": {
+        "en": "Turning content requirements into readable web layouts",
+        "ar": "ترجمة متطلبات المحتوى إلى واجهات قراءة وتنقل"
+      },
+      "steps": {
+        "en": "Content model → Pages → Reading experience",
+        "ar": "هيكلة المحتوى ← الصفحات ← تجربة القراءة"
+      },
+      "link": null,
+      "badge": "WORK SAMPLE"
+    },
+    {
+      "id": "identity",
+      "category": "design",
+      "title": {
+        "en": "Logo, Visual Identity & CV",
+        "ar": "شعار وهوية بصرية وسيرة ذاتية"
+      },
+      "tagline": {
+        "en": "Communication & professional materials",
+        "ar": "مواد بصرية ومهنية"
+      },
+      "summary": {
+        "en": "Prepared a logo, CV and related professional presentation materials using AI-assisted workflows.",
+        "ar": "أعددت شعارًا وسيرة ذاتية ومواد تقديم مهني بالاستعانة بأدوات AI."
+      },
+      "outputs": {
+        "en": "Logo design + CV",
+        "ar": "تصميم شعار + سيرة ذاتية"
+      },
+      "ability": {
+        "en": "Clear briefing, purposeful iterations and audience-focused presentation",
+        "ar": "صياغة متطلبات دقيقة، تعديل النتائج، وتكييفها مع الجمهور المستهدف"
+      },
+      "steps": {
+        "en": "Purpose → Visual direction → Refinement",
+        "ar": "الهدف ← الاتجاه البصري ← التحسين"
+      },
+      "link": null,
+      "badge": "WORK SAMPLE"
+    },
+    {
+      "id": "mobile",
+      "category": "web",
+      "title": {
+        "en": "Mobile App Concept & Build",
+        "ar": "نموذج تطبيق للهاتف"
+      },
+      "tagline": {
+        "en": "App-oriented work sample",
+        "ar": "عينة عمل لتطبيق هاتف"
+      },
+      "summary": {
+        "en": "A mobile application is part of my prepared AI-assisted outputs. The focus is moving from a use case to an app-shaped result.",
+        "ar": "تطبيق هاتف ضمن عينات الأعمال التي جهزتها بمساعدة أدوات AI، ويُظهر الانتقال من احتياج إلى مخرج على هيئة تطبيق."
+      },
+      "outputs": {
+        "en": "Mobile application output",
+        "ar": "مخرج لتطبيق هاتف"
+      },
+      "ability": {
+        "en": "Requirements definition, interface organisation and iterative building",
+        "ar": "تحديد المتطلبات وتنظيم الشاشات والبناء التكراري"
+      },
+      "steps": {
+        "en": "Use case → Screens → Refinement",
+        "ar": "حالة الاستخدام ← الشاشات ← المراجعة"
+      },
+      "link": null,
+      "badge": "WORK SAMPLE"
+    },
+    {
+      "id": "automation",
+      "category": "productivity",
+      "title": {
+        "en": "Smart Scheduling & Reminders",
+        "ar": "جدولة ذكية للمهام والتذكيرات"
+      },
+      "tagline": {
+        "en": "Productivity workflow",
+        "ar": "مسار إنتاجية وأتمتة"
+      },
+      "summary": {
+        "en": "Set up AI-assisted task scheduling and recurring reminders as examples of workflow-oriented productivity.",
+        "ar": "أعددت نماذج لجدولة المهام والتذكيرات الدورية الذكية، بما يوضح استخدام AI في تنظيم سير العمل وليس في صناعة المحتوى فقط."
+      },
+      "outputs": {
+        "en": "Recurring tasks & reminders",
+        "ar": "مهام متكررة وتذكيرات دورية"
+      },
+      "ability": {
+        "en": "Breaking a goal into actionable, repeatable steps",
+        "ar": "تقسيم الهدف إلى إجراءات محددة قابلة للتكرار"
+      },
+      "steps": {
+        "en": "Goal → Schedule → Recurring follow-up",
+        "ar": "هدف ← جدول ← متابعة دورية"
+      },
+      "link": null,
+      "badge": "WORK SAMPLE"
+    },
+    {
+      "id": "analysis",
+      "category": "analysis",
+      "title": {
+        "en": "Market Research & Analysis",
+        "ar": "بحث وتحليل السوق"
+      },
+      "tagline": {
+        "en": "Research & decision support",
+        "ar": "بحث ودعم اتخاذ القرار"
+      },
+      "summary": {
+        "en": "Prepared market-analysis outputs with AI tools, using structured questions and information organisation rather than a generic one-line answer.",
+        "ar": "أعددت مخرجات لتحليل السوق باستخدام أدوات AI، من خلال تنظيم الأسئلة والمعلومات وتحويلها إلى إطار يساعد على الفهم والمقارنة."
+      },
+      "outputs": {
+        "en": "Market-analysis materials",
+        "ar": "مخرجات لتحليل السوق"
+      },
+      "ability": {
+        "en": "Research framing, comparison and structured synthesis",
+        "ar": "صياغة أسئلة بحثية والمقارنة وتنظيم الاستنتاجات"
+      },
+      "steps": {
+        "en": "Question → Evidence organisation → Comparison",
+        "ar": "سؤال ← تنظيم المعلومات ← المقارنة"
+      },
+      "link": null,
+      "badge": "WORK SAMPLE"
+    },
+    {
+      "id": "3d",
+      "category": "design",
+      "title": {
+        "en": "3D Modelling & Visual Exploration",
+        "ar": "نمذجة ثلاثية الأبعاد"
+      },
+      "tagline": {
+        "en": "Visual / 3D output",
+        "ar": "مخرجات بصرية ثلاثية الأبعاد"
+      },
+      "summary": {
+        "en": "Created a 3D model among my hands-on AI tool demonstrations, showing cross-medium experimentation.",
+        "ar": "أعددت نموذجًا ثلاثي الأبعاد ضمن تجاربي العملية بأدوات الذكاء الاصطناعي."
+      },
+      "outputs": {
+        "en": "3D model",
+        "ar": "نموذج ثلاثي الأبعاد"
+      },
+      "ability": {
+        "en": "Exploring visual ideas through AI-assisted iterative production",
+        "ar": "تطوير الأفكار البصرية والتحسين التكراري بمساعدة AI"
+      },
+      "steps": {
+        "en": "Concept → Visual form → Iteration",
+        "ar": "فكرة ← شكل بصري ← تحسين"
+      },
+      "link": null,
+      "badge": "WORK SAMPLE"
+    },
+    {
+      "id": "engineering",
+      "category": "engineering",
+      "title": {
+        "en": "AI-Assisted Circuits & Embedded Work",
+        "ar": "تطبيقات AI في الدوائر والأنظمة المدمجة"
+      },
+      "tagline": {
+        "en": "Cross-disciplinary application",
+        "ar": "تطبيق يجمع الذكاء الاصطناعي والهندسة"
+      },
+      "summary": {
+        "en": "Prepared work involving circuits and embedded systems as part of my AI-tool demonstrations, grounded in an existing electronics-development background.",
+        "ar": "أعددت أعمالًا مرتبطة بالدوائر والأنظمة المدمجة باستخدام أدوات AI، مستندًا إلى خبرتي الفعلية في تصميم الإلكترونيات والمشروعات المدمجة."
+      },
+      "outputs": {
+        "en": "Circuit / embedded work samples",
+        "ar": "عينات في الدوائر والأنظمة المدمجة"
+      },
+      "ability": {
+        "en": "Bridging technical domain knowledge with AI-assisted problem solving",
+        "ar": "دمج الفهم الهندسي مع الاستعانة بأدوات AI في حل المشكلات"
+      },
+      "steps": {
+        "en": "Engineering brief → Technical reasoning → Output",
+        "ar": "مسألة هندسية ← تحليل تقني ← مخرج"
+      },
+      "link": null,
+      "badge": "WORK SAMPLE"
+    },
+    {
+      "id": "ai-robot",
+      "category": "engineering",
+      "title": {
+        "en": "Autonomous Robot with LLM Voice Pipeline",
+        "ar": "روبوت مستقل بتفاعل صوتي مع نماذج اللغة"
+      },
+      "tagline": {
+        "en": "Existing technical engineering project",
+        "ar": "مشروع هندسي موجود"
+      },
+      "summary": {
+        "en": "An embedded robotics project combining navigation with a voice interaction pipeline: speech input, language-model interaction and speech output.",
+        "ar": "مشروع روبوتات وأنظمة مدمجة يجمع الملاحة وسلسلة تفاعل صوتي مع نموذج لغوي: إدخال صوتي، معالجة، وإخراج صوتي."
+      },
+      "outputs": {
+        "en": "Robotics + voice pipeline",
+        "ar": "روبوتات + سلسلة تفاعل صوتي"
+      },
+      "ability": {
+        "en": "Applying AI concepts in physical engineering systems",
+        "ar": "تطبيق مفاهيم الذكاء الاصطناعي في الأنظمة الهندسية المادية"
+      },
+      "steps": {
+        "en": "Speech input → LLM → Speech output + navigation",
+        "ar": "إدخال صوتي ← نموذج لغوي ← إخراج صوتي + ملاحة"
+      },
+      "link": null,
+      "badge": "ENGINEERING"
+    }
+  ],
+  "skills": {
+    "ai": {
+      "categoryName": {
+        "en": "AI Tools in Practice",
+        "ar": "استخدام أدوات AI عمليًا"
+      },
+      "items": [
+        {
+          "name": "Prompt framing & iterative refinement",
+          "level": "APPLIED"
+        },
+        {
+          "name": "AI-assisted content and digital assets",
+          "level": "WORK SAMPLES"
+        },
+        {
+          "name": "AI-supported coding & interface iteration",
+          "level": "WORK SAMPLES"
+        },
+        {
+          "name": "Applied AI for technical problem solving",
+          "level": "CROSS-DOMAIN"
+        }
+      ]
+    },
+    "teaching": {
+      "categoryName": {
+        "en": "Teaching & Knowledge Transfer",
+        "ar": "التعليم ونقل المعرفة"
+      },
+      "items": [
+        {
+          "name": "262 published technical video lectures",
+          "level": "PUBLISHED"
+        },
+        {
+          "name": "Step-by-step explanation of complex topics",
+          "level": "MALAZ"
+        },
+        {
+          "name": "Technical curriculum and content organisation",
+          "level": "EXPERIENCE"
+        },
+        {
+          "name": "Practical Arduino & robotics instruction",
+          "level": "TRONICSHUB"
+        }
+      ]
+    },
+    "digital": {
+      "categoryName": {
+        "en": "Digital Production",
+        "ar": "الإنتاج الرقمي"
+      },
+      "items": [
+        {
+          "name": "Portfolio, e-commerce & content websites",
+          "level": "WORK SAMPLES"
+        },
+        {
+          "name": "Mobile application work sample",
+          "level": "WORK SAMPLE"
+        },
+        {
+          "name": "Logo and CV production",
+          "level": "WORK SAMPLES"
+        },
+        {
+          "name": "3D modelling output",
+          "level": "WORK SAMPLE"
+        }
+      ]
+    },
+    "productivity": {
+      "categoryName": {
+        "en": "Research & Productivity",
+        "ar": "البحث والإنتاجية"
+      },
+      "items": [
+        {
+          "name": "AI-assisted market analysis",
+          "level": "WORK SAMPLE"
+        },
+        {
+          "name": "Smart recurring task & reminder setup",
+          "level": "WORK SAMPLE"
+        },
+        {
+          "name": "Information organisation & structured outputs",
+          "level": "APPLIED"
+        },
+        {
+          "name": "Comparative reasoning and technical research",
+          "level": "TECHNICAL"
+        }
+      ]
+    },
+    "engineering": {
+      "categoryName": {
+        "en": "Engineering Foundation",
+        "ar": "الخلفية الهندسية"
+      },
+      "items": [
+        {
+          "name": "Embedded C/C++, ESP32 / Arduino",
+          "level": "EXPERIENCE"
+        },
+        {
+          "name": "Robotics & voice pipeline with LLM",
+          "level": "PROJECT"
+        },
+        {
+          "name": "Altium PCB design & prototyping",
+          "level": "EXPERIENCE"
+        },
+        {
+          "name": "Mathematics, controls and circuits instruction",
+          "level": "PUBLISHED"
+        }
+      ]
+    }
+  },
+  "malazAcademy": {
+    "channel": "@MaLaZ00",
+    "name": "ملاذ — Malaz Academy",
+    "subscriberCount": "1.81K+",
+    "videoCount": "262",
+    "startDate": "10 Dec 2020",
+    "description": {
+      "en": "A comprehensive academic and technical video library founded in 2020, delivering 262 thorough lectures on university mathematics, microprocessors assembly, electrical circuit analysis, control theory, and physics.",
+      "ar": "مكتبة أكاديمية وتقنية شاملة انطلقت في ديسمبر 2020، تضم 262 محاضرة مصورة ومفصلة في الرياضيات الجامعية المتقدمة، لغة التجميع لمعالجات Intel 8085، نظريات الدوائر والتحكم، والفيزياء الهندسية."
+    },
+    "categories": [
+      {
+        "id": "math",
+        "name": {
+          "en": "Higher Mathematics",
+          "ar": "الرياضيات الجامعية المتقدمة"
+        },
+        "topics": [
+          "Differential Calculus & Limits",
+          "Integral Calculus & Partial Fractions",
+          "Ordinary Differential Equations (ODEs)",
+          "Laplace & Inverse Laplace Transforms",
+          "Fourier Series Expansion",
+          "Gamma & Beta Special Functions",
+          "Vector Algebra & Coordinate Systems"
+        ]
+      },
+      {
+        "id": "microprocessors",
+        "name": {
+          "en": "Microprocessors & Assembly",
+          "ar": "المعالجات الدقيقة ولغة التجميع"
+        },
+        "topics": [
+          "Intel 8085 CPU Internal Architecture",
+          "Assembly Instructions: MOV, MVI, LXI, LDA, STA",
+          "Arithmetic Operations: ADD, ADC, SUB, SBB, DCR, INR",
+          "Jump & Branching Logic: JMP, JZ, JNZ, JC, JNC",
+          "Microprocessor Memory & I/O Address Space"
+        ]
+      },
+      {
+        "id": "circuits-control",
+        "name": {
+          "en": "Circuits & Control Systems",
+          "ar": "الدوائر ونظم التحكم"
+        },
+        "topics": [
+          "Kirchhoff's Laws & Resistor Networks",
+          "Thevenin, Norton & Superposition Theorems",
+          "AC Circuits & RLC Resonance",
+          "Transfer Functions & Block Diagram Algebra",
+          "First/Second-Order Transient Response",
+          "Routh-Hurwitz Stability Criterion"
+        ]
+      },
+      {
+        "id": "statistics-physics",
+        "name": {
+          "en": "Statistics, Physics & MATLAB",
+          "ar": "الإحصاء والفيزياء وماتلاب"
+        },
+        "topics": [
+          "Descriptive Statistics & Central Tendency",
+          "Measures of Dispersion, Skewness & Kurtosis",
+          "Linear Regression & Pearson Correlation",
+          "Statics, Dynamics & Center of Gravity",
+          "MATLAB Practical Simulations"
+        ]
+      }
+    ]
+  },
+  "tronicshub": {
+    "name": "TronicsHub",
+    "founded": "October 2024",
+    "role": {
+      "en": "Founder & Lead Hardware Developer",
+      "ar": "المؤسس ومطور العتاد الإلكتروني"
+    },
+    "location": "Sohag, Egypt",
+    "overview": {
+      "en": "TronicsHub is a technology and embedded hardware development initiative founded by Abdelrahman Fathi. It provides custom embedded hardware prototyping, electronic product development, graduation project engineering support, and practical technical training.",
+      "ar": "ترونكس هب (TronicsHub) هي مبادرة هندسية تقنية متخصصة أسسها عبدالرحمن فتحي لتصميم وتطوير النماذج الأولية للأجهزة الإلكترونية، وتصنيع حلول الأنظمة المدمجة، وتقديم الدعم الفني لمشاريع التخرج، والتدريب العملي المتخصص."
+    },
+    "services": [
+      {
+        "title": {
+          "en": "Explaining Complex Ideas Clearly",
+          "ar": "تبسيط المفاهيم المعقدة"
+        },
+        "desc": {
+          "en": "A teaching record of 262 published lectures in advanced mathematics, circuits, microprocessors and control systems.",
+          "ar": "سجل تعليمي يتضمن 262 محاضرة منشورة في الرياضيات العليا والدوائر والمعالجات الدقيقة ونظم التحكم."
+        },
+        "icon": "book-open"
+      },
+      {
+        "title": {
+          "en": "Turning Ideas into Tangible Outputs",
+          "ar": "تحويل الأفكار إلى مخرجات"
+        },
+        "desc": {
+          "en": "Hands-on samples range from websites and professional documents to apps, 3D work and AI-supported analysis.",
+          "ar": "عينات عملية تشمل المواقع والوثائق المهنية والتطبيقات والنمذجة ثلاثية الأبعاد والتحليل بمساعدة AI."
+        },
+        "icon": "layers"
+      },
+      {
+        "title": {
+          "en": "Structuring Practical Workflows",
+          "ar": "تنظيم خطوات العمل التطبيقي"
+        },
+        "desc": {
+          "en": "A systematic approach to briefs, iterations, comparisons and repeatable reminders, grounded in samples already prepared.",
+          "ar": "نهج عملي يبدأ بتحديد المطلوب ثم التعديل والمقارنة وجدولة الإجراءات المتكررة، وله عينات مُعدة بالفعل."
+        },
+        "icon": "award"
+      },
+      {
+        "title": {
+          "en": "Connecting AI with Technical Practice",
+          "ar": "ربط AI بالتطبيق التقني"
+        },
+        "desc": {
+          "en": "Engineering experience through TronicsHub, custom hardware projects and an AI voice-interaction robot.",
+          "ar": "خبرة هندسية من خلال TronicsHub ومشروعات الأنظمة المدمجة والروبوتات والتفاعل الصوتي مع النماذج اللغوية."
+        },
+        "icon": "cpu"
+      }
+    ]
+  },
+  "cvData": {
+    "roles": [
+      {
+        "id": "trainer",
+        "title": {
+          "en": "Technical Educator",
+          "ar": "محاضر تقني"
+        }
+      },
+      {
+        "id": "ai",
+        "title": {
+          "en": "AI Tools & Digital Production",
+          "ar": "أدوات AI والإنتاج الرقمي"
+        }
+      },
+      {
+        "id": "tech",
+        "title": {
+          "en": "Technical Background",
+          "ar": "الخلفية التقنية"
+        }
+      },
+      {
+        "id": "master",
+        "title": {
+          "en": "Full Profile",
+          "ar": "الملف المهني الشامل"
+        }
+      }
+    ]
+  }
+};
+</script>
+<script>const I18N_DICTIONARY = {
+  "en": {
+    "nav": {
+      "about": "Overview",
+      "highlights": "Evidence",
+      "projects": "Selected Work",
+      "skills": "Capabilities",
+      "malaz": "Education",
+      "tronicshub": "Value",
+      "cv": "Interactive CV",
+      "contact": "Contact",
+      "talkCta": "Let's Connect"
+    },
+    "hero": {
+      "status": "TECHNICAL EDUCATOR · AI TOOLS PRACTITIONER",
+      "bio": "I combine a published teaching track record with hands-on AI-assisted digital work. From 262 technical lectures to websites, apps, productivity and engineering projects, my focus is making complex tools useful.",
+      "viewProjectsBtn": "Explore Work Samples",
+      "viewCvBtn": "Role-focused Profile",
+      "contactBtn": "Contact",
+      "oscTitle": "WORKFLOW EXPLORER",
+      "freq": "FOCUS",
+      "voltage": "APPROACH",
+      "busProtocol": "OUTPUT"
+    },
+    "sections": {
+      "distinctionEyebrow": "Evidence & Track Record",
+      "distinctionTitle": "Experience You Can Verify",
+      "distinctionDesc": "A public teaching record, real technical projects and recognitions that form the foundation for applying new tools.",
+      "projectsEyebrow": "AI-Assisted Work Samples",
+      "projectsTitle": "What I Have Prepared & Built",
+      "projectsDesc": "Selected practical outputs I have prepared using AI tools, plus an existing engineering project. Explore each card for the work and the skill it demonstrates.",
+      "skillsEyebrow": "Applied Capabilities",
+      "skillsTitle": "The Skills Behind the Outputs",
+      "skillsDesc": "A blend of communication, digital production, structured problem-solving and a technical foundation.",
+      "malazEyebrow": "Established Teaching Experience",
+      "malazTitle": "Malaz — 262 Published Lectures",
+      "malazDesc": "University-level explanations in mathematics, electronics, microprocessors and control systems. These are technical lectures, not AI-training sessions.",
+      "tronicshubEyebrow": "What I Bring",
+      "tronicshubTitle": "How This Experience Creates Value",
+      "tronicshubDesc": "The strongest combination is explaining demanding ideas and using digital tools to produce usable results.",
+      "cvEyebrow": "Professional Profile",
+      "cvTitle": "Interactive CV · Choose Your Focus",
+      "cvDesc": "View the same documented experience through a training, AI-production or technical lens. Copy the text or print it as PDF.",
+      "contactEyebrow": "Contact",
+      "contactTitle": "Let’s Discuss a Practical Collaboration",
+      "contactDesc": "For technical education, AI-assisted workflows, digital projects and engineering collaboration."
+    },
+    "modal": {
+      "architectureFlow": "APPROACH / WORKFLOW",
+      "technicalSpecs": "OUTPUT & FOCUS",
+      "keyHighlights": "WHAT IT DEMONSTRATES",
+      "closeBtn": "Close"
+    },
+    "cv": {
+      "exportPdf": "Print / Save PDF",
+      "copyText": "Copy Profile Text",
+      "targetRole": "Profile Focus:"
+    },
+    "contact": {
+      "phoneTitle": "Phone & WhatsApp",
+      "emailTitle": "Email",
+      "linkedinTitle": "LinkedIn",
+      "githubTitle": "GitHub",
+      "youtubeTitle": "YouTube",
+      "locationTitle": "Location",
+      "copySuccess": "Copied to clipboard!"
+    },
+    "footer": {
+      "builtWith": "Education · Technology · Practical Work."
+    },
+    "filters": {
+      "all": "All Work (10)",
+      "web": "Web & Apps",
+      "design": "Visual Work",
+      "productivity": "Productivity",
+      "analysis": "Research",
+      "engineering": "Engineering"
+    },
+    "roles": {
+      "trainer": "Technical Educator",
+      "ai": "AI Tools & Digital Work",
+      "tech": "Engineering Foundation",
+      "master": "Full Profile"
+    },
+    "evidence": {
+      "lectures": "Published lectures",
+      "since": "Channel established",
+      "subjects": "Math · Electronics · Control",
+      "channelLink": "View published lectures @MaLaZ00"
+    },
+    "contactExtra": {
+      "title": "Education meets practical technology.",
+      "body": "I welcome conversations about technical teaching, AI-assisted digital work, and projects that need both communication and technical depth."
+    },
+    "metrics": {
+      "lectures": "Published Lectures",
+      "since": "Teaching Since",
+      "samples": "Work Samples",
+      "grad": "Graduation Project"
+    }
+  },
+  "ar": {
+    "nav": {
+      "about": "نبذة",
+      "highlights": "دلائل الخبرة",
+      "projects": "الأعمال",
+      "skills": "القدرات",
+      "malaz": "التعليم",
+      "tronicshub": "القيمة المضافة",
+      "cv": "سيرة تفاعلية",
+      "contact": "التواصل",
+      "talkCta": "تواصل معي"
+    },
+    "hero": {
+      "status": "محاضر تقني · ممارس أدوات الذكاء الاصطناعي",
+      "bio": "أجمع بين خبرة تعليمية منشورة وتطبيق عملي لأدوات AI. من 262 محاضرة تقنية إلى مواقع وتطبيقات وأتمتة ومشروعات هندسية، أركز على تحويل الأدوات المعقدة إلى نتائج مفيدة.",
+      "viewProjectsBtn": "استعرض نماذج الأعمال",
+      "viewCvBtn": "الملف المهني التفاعلي",
+      "contactBtn": "تواصل",
+      "oscTitle": "مسارات العمل العملية",
+      "freq": "المجال",
+      "voltage": "المنهج",
+      "busProtocol": "الناتج"
+    },
+    "sections": {
+      "distinctionEyebrow": "دلائل الخبرة",
+      "distinctionTitle": "خبرة يمكن الرجوع إلى شواهدها",
+      "distinctionDesc": "محتوى تعليمي منشور، ومشروعات تقنية موجودة، وجوائز تعكس أساسًا علميًا وعمليًا يمكن الاستناد إليه.",
+      "projectsEyebrow": "نماذج أعمال بمساعدة AI",
+      "projectsTitle": "أعمال أعددتها ونفذتها",
+      "projectsDesc": "عينات عملية أعددتها باستخدام أدوات AI، بجانب مشروع هندسي قائم. افتح كل بطاقة للتعرف على المخرج والقدرة التي يوضحها.",
+      "skillsEyebrow": "القدرات العملية",
+      "skillsTitle": "المهارات التي تقف خلف المخرجات",
+      "skillsDesc": "مزيج من الشرح والإنتاج الرقمي والتفكير المنظم مع خلفية هندسية حقيقية.",
+      "malazEyebrow": "خبرة تعليمية سابقة وموثقة",
+      "malazTitle": "ملاذ — 262 محاضرة منشورة",
+      "malazDesc": "شروحات جامعية في الرياضيات والإلكترونيات والمعالجات الدقيقة ونظم التحكم. هذه محاضرات تقنية وليست دورات AI.",
+      "tronicshubEyebrow": "القيمة التي أقدمها",
+      "tronicshubTitle": "كيف تتحول هذه الخبرات إلى قيمة",
+      "tronicshubDesc": "أجمع بين القدرة على شرح المفاهيم الصعبة وبين استخدام الأدوات الرقمية لإنتاج مخرجات قابلة للتطبيق.",
+      "cvEyebrow": "الملف المهني",
+      "cvTitle": "سيرة تفاعلية · اختر زاوية العرض",
+      "cvDesc": "نفس الخبرات الموثقة بصيغ ملائمة للتعليم أو الإنتاج بأدوات AI أو الخلفية التقنية. نسخ أو طباعة PDF.",
+      "contactEyebrow": "التواصل",
+      "contactTitle": "لنتحدث عن تعاون عملي",
+      "contactDesc": "في التعليم التقني، واستخدام أدوات AI، والمشروعات الرقمية، والتطبيقات الهندسية."
+    },
+    "modal": {
+      "architectureFlow": "خطوات العمل",
+      "technicalSpecs": "المخرجات ومجال التطبيق",
+      "keyHighlights": "ما الذي يبرهن عليه العمل",
+      "closeBtn": "إغلاق"
+    },
+    "cv": {
+      "exportPdf": "طباعة / حفظ PDF",
+      "copyText": "نسخ نص الملف",
+      "targetRole": "زاوية العرض:"
+    },
+    "contact": {
+      "phoneTitle": "الهاتف والواتساب",
+      "emailTitle": "البريد الإلكتروني",
+      "linkedinTitle": "لينكدإن",
+      "githubTitle": "جيت هب",
+      "youtubeTitle": "يوتيوب",
+      "locationTitle": "المكان",
+      "copySuccess": "تم النسخ!"
+    },
+    "footer": {
+      "builtWith": "تعليم · تقنية · تطبيق عملي."
+    },
+    "filters": {
+      "all": "كل الأعمال (10)",
+      "web": "المواقع والتطبيقات",
+      "design": "أعمال بصرية",
+      "productivity": "الإنتاجية",
+      "analysis": "البحث",
+      "engineering": "الهندسة"
+    },
+    "roles": {
+      "trainer": "محاضر تقني",
+      "ai": "أدوات AI والإنتاج الرقمي",
+      "tech": "الخلفية الهندسية",
+      "master": "الملف الشامل"
+    },
+    "evidence": {
+      "lectures": "محاضرة منشورة",
+      "since": "تأسيس القناة",
+      "subjects": "رياضيات · إلكترونيات · تحكم",
+      "channelLink": "استعراض محاضرات قناة ملاذ"
+    },
+    "contactExtra": {
+      "title": "تعليم وتقنية وتطبيق عملي.",
+      "body": "أرحب بالنقاش حول التعليم التقني والأعمال الرقمية بمساعدة AI والمشروعات التي تتطلب تبسيطًا تقنيًا وتنفيذًا عمليًا."
+    },
+    "metrics": {
+      "lectures": "محاضرة منشورة",
+      "since": "التعليم منذ",
+      "samples": "نماذج أعمال",
+      "grad": "مشروع التخرج"
+    }
+  }
+};
+
+class I18nManager {
+  constructor() {
+    this.currentLang = (function(){try{return localStorage.getItem('portfolio_lang')}catch(e){return null}})() || 'en';
+    this.init();
+  }
+
+  init() {
+    this.applyLanguage(this.currentLang);
+    const toggleBtn = document.getElementById('langToggleBtn');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        this.toggleLanguage();
+      });
+    }
+  }
+
+  toggleLanguage() {
+    const newLang = this.currentLang === 'en' ? 'ar' : 'en';
+    this.applyLanguage(newLang);
+  }
+
+  applyLanguage(lang) {
+    this.currentLang = lang;
+    try { localStorage.setItem('portfolio_lang', lang); } catch(e) { /* storage may be disabled in file previews */ }
+
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    // Update toggle button text
+    const langLabel = document.getElementById('langToggleLabel');
+    if (langLabel) {
+      langLabel.textContent = lang === 'en' ? 'العربية (AR)' : 'English (EN)';
+    }
+
+    // Translate all static data-i18n attributes
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const keyPath = el.getAttribute('data-i18n');
+      const text = this.getNestedValue(I18N_DICTIONARY[lang], keyPath);
+      if (text) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = text;
+        } else {
+          el.textContent = text;
+        }
+      }
+    });
+
+    // Notify app subsystems to re-render dynamic content
+    window.dispatchEvent(new CustomEvent('langChanged', { detail: { lang } }));
+  }
+
+  getNestedValue(obj, path) {
+    return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+  }
+
+  t(keyPath) {
+    return this.getNestedValue(I18N_DICTIONARY[this.currentLang], keyPath) || keyPath;
+  }
+}
+
+// Global instance
+window.i18n = new I18nManager();
+</script>
+<script>/**
+ * Interactive workflow diagram in the original portfolio's instrument-style bento panel.
+ * It illustrates thought processes; it does not pretend to call an AI model.
+ */
+class WorkflowLab {
+  constructor() {
+    this.canvas = document.getElementById('workflowCanvas');
+    if (!this.canvas) return;
+    this.ctx = this.canvas.getContext('2d');
+    this.mode = 'web';
+    this.start = performance.now();
+    this.width = 400;
+    this.height = 250;
+    this.lang = () => window.i18n?.currentLang || 'en';
+    this.steps = {
+      web: {en:['BRIEF','STRUCTURE','BUILD','REVIEW'],ar:['المطلوب','الهيكلة','البناء','المراجعة'],meta: {en:['Web','Iterative build','Working page'],ar:['الويب','بناء تكراري','صفحة ويب']}},
+      research: {en:['QUESTION','COMPARE','SYNTHESIZE','DECIDE'],ar:['السؤال','المقارنة','التحليل','القرار'],meta:{en:['Analysis','Structured research','Insights'],ar:['البحث','بحث منظم','استنتاجات']}},
+      creative: {en:['IDEA','DIRECTION','GENERATE','REFINE'],ar:['الفكرة','الاتجاه','الإنتاج','التحسين'],meta:{en:['Creative','Iteration','Digital asset'],ar:['الإبداع','تحسين متكرر','مخرج بصري']}},
+      automate: {en:['TASK','SCHEDULE','TRIGGER','FOLLOW UP'],ar:['المهمة','الجدولة','الموعد','المتابعة'],meta:{en:['Workflow','Repeatable steps','Reminder'],ar:['الإنتاجية','خطوات متكررة','تذكير']}}
+    };
+    this.bind();
+    this.resize();
+    this.updateMetadata();
+    requestAnimationFrame(this.paint.bind(this));
+  }
+  bind() {
+    document.querySelectorAll('.workflow-panel .scope-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.mode = btn.dataset.mode;
+        document.querySelectorAll('.workflow-panel .scope-tab-btn').forEach(el => {
+          const selected = el === btn;
+          el.classList.toggle('active', selected);
+          el.setAttribute('aria-selected', String(selected));
+        });
+        this.updateMetadata();
+      });
+    });
+    window.addEventListener('resize', () => this.resize());
+    window.addEventListener('langChanged', () => this.updateMetadata());
+  }
+  resize() {
+    const bounds = this.canvas.parentElement.getBoundingClientRect();
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    this.width = Math.max(250, bounds.width);
+    this.height = 250;
+    this.canvas.width = this.width * dpr;
+    this.canvas.height = this.height * dpr;
+    this.ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  updateMetadata() {
+    const v = this.steps[this.mode].meta[this.lang()];
+    ['hudFreq','hudVolt','hudBus'].forEach((id,i) => {
+      const el = document.getElementById(id);
+      if(el) el.textContent = v[i];
+    });
+  }
+  roundRect(x,y,w,h,r) {
+    this.ctx.beginPath();
+    this.ctx.roundRect(x,y,w,h,r);
+  }
+  paint(now) {
+    const ctx=this.ctx, w=this.width,h=this.height;
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle='#050811';ctx.fillRect(0,0,w,h);
+    ctx.lineWidth=1;
+    ctx.strokeStyle='rgba(56,189,248,.075)';
+    for(let x=0;x<w;x+=24){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke();}
+    for(let y=0;y<h;y+=24){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}
+    const compact=w<370, row=compact;
+    const steps=this.steps[this.mode][this.lang()];
+    const count=4;
+    const pos=Array.from({length:count},(_,i)=>{
+      if(row) return {x:22+(i%2)*(w/2-4),y:42+Math.floor(i/2)*107,width:w/2-42,height:52};
+      const sw=Math.min(125,(w-92)/4);
+      const gap=(w-40-sw*4)/3;
+      return {x:20+i*(sw+gap),y:92,width:sw,height:62};
+    });
+    // Connectors are animated but are not actual AI tool executions.
+    ctx.lineWidth=2;
+    pos.forEach((p,i)=>{
+      if (i===pos.length-1) return;
+      const n=pos[i+1];
+      const sx=p.x+p.width,sy=p.y+p.height/2, ex=n.x,ey=n.y+n.height/2;
+      ctx.strokeStyle='rgba(129,140,248,.65)';ctx.beginPath();
+      if (row && i===1) {ctx.moveTo(sx-4,sy+25);ctx.lineTo(sx-4,sy+55);ctx.lineTo(n.x+n.width+4,sy+55);ctx.lineTo(n.x+n.width+4,ey-25);} 
+      else {ctx.moveTo(sx,sy);ctx.lineTo(ex,ey);} ctx.stroke();
+      if(!row || i!==1){
+        const t=((now-this.start)/1800 + i*.24)%1;
+        const px=sx+(ex-sx)*t, py=sy+(ey-sy)*t;
+        ctx.beginPath();ctx.arc(px,py,3.2,0,Math.PI*2);ctx.fillStyle='#34d399';ctx.shadowColor='#34d399';ctx.shadowBlur=12;ctx.fill();ctx.shadowBlur=0;
+      }
+    });
+    pos.forEach((p,i)=>{
+      const chosen = i===Math.floor((now-this.start)/1450)%4;
+      ctx.shadowColor=chosen?'rgba(56,189,248,.3)':'transparent';ctx.shadowBlur=chosen?20:0;
+      this.roundRect(p.x,p.y,p.width,p.height,10);
+      ctx.fillStyle=chosen?'#132a45':'#0f1829';ctx.fill();
+      ctx.strokeStyle=chosen?'#38bdf8':'#31465e';ctx.stroke();ctx.shadowBlur=0;
+      ctx.font='600 11px "JetBrains Mono", "IBM Plex Sans Arabic", sans-serif';
+      ctx.textAlign='center';ctx.textBaseline='middle';
+      ctx.fillStyle=chosen?'#7dd3fc':'#dbeafe';
+      const label=steps[i];
+      ctx.fillText(label,p.x+p.width/2,p.y+p.height/2,p.width-10);
+      ctx.fillStyle='#34d399';ctx.beginPath();ctx.arc(p.x+10,p.y+10,2.5,0,Math.PI*2);ctx.fill();
+    });
+    ctx.font='600 10px "JetBrains Mono", sans-serif';ctx.textAlign='left';ctx.fillStyle='#7489a9';
+    ctx.fillText('INPUT  /  PROCESS  /  OUTPUT',20,h-15);
+    requestAnimationFrame(this.paint.bind(this));
+  }
+}
+window.addEventListener('DOMContentLoaded',()=>{ window.workflowLabInstance=new WorkflowLab(); });
+</script>
+<script>/** Adapted from the exact original interactive CV workstation: role views + copy + PDF print. */
+class CvEngine {
+  constructor(containerId) {
+    this.container=document.getElementById(containerId);
+    if(!this.container)return;
+    this.currentRole='trainer';
+    this.bindEvents();this.render();
+    window.addEventListener('langChanged',()=>this.render());
+  }
+  bindEvents() {
+    document.querySelectorAll('.cv-role-pill-btn').forEach(btn=>btn.addEventListener('click',()=>{
+      document.querySelectorAll('.cv-role-pill-btn').forEach(b=>b.classList.toggle('active',b===btn));
+      this.currentRole=btn.dataset.role;this.render();
+    }));
+    document.getElementById('cvPrintBtn')?.addEventListener('click',()=>window.print());
+    document.getElementById('cvCopyBtn')?.addEventListener('click',()=>this.copyPlaintext());
+  }
+  details(lang) {
+    const ar=lang==='ar';
+    const data={
+      trainer: {
+        title: ar?'محاضر تقني وصانع محتوى تعليمي':'Technical Educator & Educational Content Creator',
+        summary: ar?'خبرة موثقة في إعداد ونشر 262 محاضرة جامعية وتقنية عبر ملاذ منذ 2020، تشمل الرياضيات العليا ونظم التحكم والدوائر والمعالجات الدقيقة. مؤسس TronicsHub وله خبرة في التعليم التطبيقي والمشروعات التقنية.':'Published 262 university-level and technical lectures through Malaz since 2020, spanning advanced mathematics, control systems, circuits and microprocessors. Founder of TronicsHub with practical technical mentoring experience.',
+        skills:['Technical explanation','Educational video content','Curriculum organisation','Higher Mathematics','Microprocessors & Control','Practical mentoring'],
+        ids:['portfolio','ai-robot']
+      },
+      ai: {
+        title:ar?'ممارس أدوات AI والإنتاج الرقمي':'AI Tools Practitioner & Digital Creator',
+        summary:ar?'أستخدم أدوات AI في إعداد مخرجات عملية تشمل المواقع والسيرة الذاتية والهوية البصرية وتطبيق الهاتف والنمذجة ثلاثية الأبعاد وتحليل السوق وجدولة المهام. خلفيتي التقنية والتعليمية تتيح لي تنظيم الأفكار وتحويلها إلى نماذج ملموسة.':'Hands-on AI-assisted work samples include websites, CV and visual assets, a mobile app, 3D modelling, market analysis and recurring task setups. My teaching and technical background support structured problem solving and implementation.',
+        skills:['AI-assisted web creation','Prompt iteration','Branding & CV','Research synthesis','Automation & reminders','Digital prototyping'],
+        ids:['portfolio','commerce','analysis','automation']
+      },
+      tech: {
+        title:ar?'مطور إلكترونيات وأنظمة مدمجة':'Electronics & Embedded Systems Developer',
+        summary:ar?'مطور أنظمة مدمجة ومؤسس TronicsHub، بخبرة في ESP32 وArduino وتصميم الدوائر المطبوعة والروبوتات. مشروع التخرج حاصل على 300/300، وأعمل على ربط التطبيقات الهندسية بأدوات AI.':'Embedded systems developer and TronicsHub founder experienced in ESP32, Arduino, PCB design and robotics. Graduation project scored 300/300; practical work includes an LLM voice-interaction robotics project.',
+        skills:['Embedded C/C++','ESP32 & Arduino','Altium PCB','Robotics','LLM voice pipeline','Sensors & IoT'],
+        ids:['ai-robot','engineering']
+      },
+      master: {
+        title:ar?'ملف مهني متكامل · التعليم والتقنية وأدوات AI':'Education, Technology & Applied AI Portfolio',
+        summary:PORTFOLIO_DATA.profile.summary[lang],
+        skills:['262 published lectures','AI-assisted digital outputs','Web & app work samples','Market research','TronicsHub','Embedded systems & robotics'],
+        ids:['portfolio','ai-robot','automation','analysis']
+      }
+    };return data[this.currentRole]||data.trainer;
+  }
+  render() {
+    const lang=window.i18n?.currentLang||'en';const ar=lang==='ar';
+    const profile=PORTFOLIO_DATA.profile;const education=PORTFOLIO_DATA.education;
+    const role=this.details(lang);
+    const selected=role.ids.map(id=>PORTFOLIO_DATA.projects.find(p=>p.id===id)).filter(Boolean);
+    this.container.innerHTML=`<div class="cv-sheet-preview" ${ar?'dir="rtl"':''}>
+      <div class="cv-sheet-header"><h2 class="cv-sheet-name">${profile.name[lang]}</h2>
+        <div class="cv-sheet-title">${role.title}</div>
+        <div class="cv-sheet-contact"><span>${profile.location[lang]}</span><span>${profile.email}</span>
+          <span>linkedin.com/in/${profile.linkedinUser}</span><span>youtube.com/${profile.youtubeUser}</span></div>
+      </div>
+      <div class="cv-sheet-section"><h3 class="cv-sheet-section-title">${ar?'الملخص المهني':'PROFESSIONAL SUMMARY'}</h3><p>${role.summary}</p></div>
+      <div class="cv-sheet-section"><h3 class="cv-sheet-section-title">${ar?'المهارات ومجالات العمل':'CAPABILITIES'}</h3>
+        <div class="cv-keywords">${role.skills.map(s=>`<span>${s}</span>`).join('')}</div>
+      </div>
+      <div class="cv-sheet-section"><h3 class="cv-sheet-section-title">${ar?'الخبرة الموثقة':'DOCUMENTED EXPERIENCE'}</h3>
+        <div class="cv-sheet-item"><div class="cv-sheet-item-head"><span>${ar?'ملاذ — محاضر تقني وصانع محتوى':'Malaz Academy — Technical Educator'}</span><span>2020 — ${ar?'الآن':'Present'}</span></div>
+        <ul class="cv-sheet-bullets"><li>${ar?'262 محاضرة تقنية وجامعية منشورة':'262 published technical and university-level lectures'}</li>
+          <li>${ar?'موضوعات: رياضيات عليا، معالجات دقيقة، دوائر، نظم تحكم':'Subjects: higher mathematics, microprocessors, circuits and controls'}</li></ul></div>
+        <div class="cv-sheet-item"><div class="cv-sheet-item-head"><span>${ar?'TronicsHub — المؤسس ومطور إلكترونيات':'TronicsHub — Founder & Hardware Developer'}</span><span>2024 — ${ar?'الآن':'Present'}</span></div>
+        <ul class="cv-sheet-bullets"><li>${ar?'نمذجة أنظمة إلكترونية ومشروعات مدمجة ودعم تقني لمشروعات التخرج':'Electronics prototyping, embedded projects and technical guidance for graduation work'}</li></ul></div>
+      </div>
+      <div class="cv-sheet-section"><h3 class="cv-sheet-section-title">${ar?'نماذج أعمال مختارة':'SELECTED WORK SAMPLES'}</h3>
+        <ul class="cv-sheet-bullets">${selected.map(p=>`<li><strong>${p.title[lang]}</strong> — ${p.outputs[lang]}</li>`).join('')}</ul>
+      </div>
+      <div class="cv-sheet-section"><h3 class="cv-sheet-section-title">${ar?'التعليم':'EDUCATION'}</h3>
+        <div class="cv-sheet-item-head"><span>${education.degree[lang]}</span><span>${education.year}</span></div>
+        <p>${education.institution[lang]} · ${education.grade[lang]} · ${education.ranking[lang]}</p>
+      </div>
+      <div class="cv-sheet-section"><h3 class="cv-sheet-section-title">${ar?'الجوائز':'AWARDS'}</h3><ul class="cv-sheet-bullets">
+        ${PORTFOLIO_DATA.awards.map(award=>`<li>${award.title[lang]} · ${award.year}</li>`).join('')}
+      </ul></div>
+    </div>`;
+  }
+  copyPlaintext() {
+    const content=this.container.innerText;
+    const success=()=>window.showToast?.(window.i18n?.t('contact.copySuccess')||'Copied');
+    if(navigator.clipboard?.writeText)navigator.clipboard.writeText(content).then(success).catch(()=>this.fallback(content,success));
+    else this.fallback(content,success);
+  }
+  fallback(content,success){const t=document.createElement('textarea');t.value=content;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();success();}
+}
+window.addEventListener('DOMContentLoaded',()=>{window.cvEngineInstance=new CvEngine('cvPaperContainer');});
+</script>
+<script>/**
+ * Main Application Orchestrator — "Electric Sapphire & Aurora"
+ * Abdelrahman Fathi Abodaif — Portfolio Web App
+ * Features: Floating Navbar, Bento Grids, Modal Deep-Dive, Live Tweaks Panel, ATS Engine
+ */
+
+class PortfolioApp {
+  constructor() {
+    this.currentProjectFilter = 'all';
+    this.currentSkillTab = 'ai';
+    this.currentTheme = (function(){try{return localStorage.getItem('portfolio_theme')}catch(e){return null}})() || 'dark';
+
+    this.init();
+  }
+
+  init() {
+    this.applyTheme(this.currentTheme);
+    this.renderHeroRotation();
+    this.renderHighlights();
+    this.renderProjects();
+    this.renderSkills();
+    this.renderMalazAcademy();
+    this.renderTronicsHubServices();
+    this.bindEvents();
+    this.setupScrollSpy();
+    this.setupTweaksPanel();
+
+    window.addEventListener('langChanged', () => {
+      this.renderHeroRotation();
+      this.renderHighlights();
+      this.renderProjects();
+      this.renderSkills();
+      this.renderMalazAcademy();
+      this.renderTronicsHubServices();
+    });
+  }
+
+  /* ========================================================================
+     1. THEME MANAGEMENT (DARK / LIGHT)
+     ======================================================================== */
+  toggleTheme() {
+    const newTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+    this.applyTheme(newTheme);
+  }
+
+  applyTheme(theme) {
+    this.currentTheme = theme;
+    try { localStorage.setItem('portfolio_theme', theme); } catch(e) { /* storage optional */ }
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // Update Theme Toggle Button Icons
+    const themeIcons = document.querySelectorAll('.theme-icon-slot');
+    themeIcons.forEach(icon => {
+      if (theme === 'dark') {
+        icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+      } else {
+        icon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+      }
+    });
+
+    if (window.oscilloscopeInstance) {
+      window.oscilloscopeInstance.updateTelemetry();
+    }
+  }
+
+  /* ========================================================================
+     2. HERO ROTATING SUBTITLES
+     ======================================================================== */
+  renderHeroRotation() {
+    const rotateEl = document.getElementById('heroSubtitleRotate');
+    if (!rotateEl) return;
+
+    const lang = window.i18n ? window.i18n.currentLang : 'en';
+    const list = PORTFOLIO_DATA.profile.subtitles[lang];
+    let idx = 0;
+
+    clearInterval(this.rotateInterval);
+    rotateEl.textContent = list[0];
+
+    this.rotateInterval = setInterval(() => {
+      idx = (idx + 1) % list.length;
+      rotateEl.style.opacity = '0';
+      setTimeout(() => {
+        rotateEl.textContent = list[idx];
+        rotateEl.style.opacity = '1';
+      }, 250);
+    }, 3400);
+  }
+
+  /* Experience evidence — sourced from the original CV and published educational record. */
+  renderHighlights() {
+    const container = document.getElementById('highlightsContainer');
+    if (!container) return;
+    const ar = window.i18n?.currentLang === 'ar';
+    const cards = [
+      {
+        variant: 'cyan', mark: '262',
+        rank: ar ? 'قناة ملاذ · منذ 2020' : 'Malaz · Since 2020',
+        title: ar ? '262 محاضرة تقنية منشورة' : '262 Published Technical Lectures',
+        tag: ar ? 'تعليم جامعي وشروحات مطولة' : 'University-level teaching content',
+        desc: ar ? 'محتوى منشور في الرياضيات العليا والمعالجات الدقيقة ونظم التحكم والدوائر؛ دليل مباشر على الخبرة في الشرح وتنظيم المعرفة.' : 'Public lectures on higher mathematics, microprocessors, controls and circuits—direct evidence of explanation and knowledge organisation.'
+      },
+      {
+        variant: 'purple', mark: '88%',
+        rank: ar ? 'الثالث على شعبة الإلكترونيات' : '3rd in Electronics Division',
+        title: ar ? 'امتياز مع مرتبة الشرف' : 'Excellent with Honours',
+        tag: ar ? 'جامعة سوهاج · 2024' : 'Sohag University · 2024',
+        desc: ar ? 'أساس علمي قوي مدعوم بتخصص هندسي ومشروع تخرج حصل على 300/300، وهو ما يضيف عمقًا للتطبيقات الرقمية والتقنية.' : 'An engineering academic foundation; the graduation project received 300/300, supporting technical credibility beyond AI prompts.'
+      },
+      {
+        variant: 'green', mark: '2024',
+        rank: ar ? 'جوائز وابتكار' : 'Innovation recognition',
+        title: ar ? 'Hult Prize و ISF' : 'Hult Prize & ISF Awards',
+        tag: ar ? 'المركز الأول جامعيًا + فوز في مسابقتين' : 'University first place + two winning entries',
+        desc: ar ? 'المركز الأول على مستوى الجامعة في Hult Prize، والفوز في مسابقتي EGP وIGB لصندوق رعاية المبتكرين والنوابغ.' : 'First place at the university Hult Prize local summit, with winning teams in ISF EGP and IGB competitions.'
+      }
+    ];
+    container.innerHTML = cards.map(c => `<div class="honor-bento-card ${c.variant}">
+       <div><div class="honor-top-badge-row"><div class="honor-icon-emblem evidence-mark">${c.mark}</div>
+       <span class="honor-rank-pill">${c.rank}</span></div><h3 class="honor-title">${c.title}</h3>
+       <div class="honor-tagline">${c.tag}</div></div><p class="honor-desc">${c.desc}</p>
+    </div>`).join('');
+  }
+
+  /* Existing project bento and filter mechanics preserved. */
+  renderProjects() {
+    const grid = document.getElementById('projectsGrid');
+    if (!grid) return;
+    const lang = window.i18n?.currentLang || 'en';
+    let items = PORTFOLIO_DATA.projects;
+    if (this.currentProjectFilter !== 'all') items = items.filter(p => p.category === this.currentProjectFilter);
+    grid.innerHTML = items.map(p => `<button type="button" class="project-bento-card" data-project-id="${p.id}" aria-label="${lang === 'ar' ? 'تفاصيل:' : 'Details:'} ${p.title[lang]}">
+      <div class="project-card-top"><span class="project-badge-tag ${p.id === 'portfolio' ? 'highlight-gold' : ''}">${p.badge}</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-faint);"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </div><div class="project-card-body"><h3 class="project-card-heading">${p.title[lang]}</h3>
+      <div class="project-card-subtitle">${p.tagline[lang]}</div><p class="project-card-text">${p.summary[lang]}</p>
+      <div class="project-chips-container"><span class="spec-chip">${p.category.toUpperCase()}</span><span class="spec-chip">${p.link ? (lang === 'ar' ? 'رابط متاح' : 'VIEW ONLINE') : (lang === 'ar' ? 'عينة عمل' : 'WORK SAMPLE')}</span></div>
+      </div><div class="project-card-bottom"><span>${lang === 'ar' ? 'تفاصيل العمل' : 'Explore work'}</span><span class="arrow-icon">→</span></div>
+    </button>`).join('');
+    grid.querySelectorAll('[data-project-id]').forEach(card => card.addEventListener('click', () => this.openProjectModal(card.dataset.projectId)));
+  }
+
+  openProjectModal(id) {
+    const p = PORTFOLIO_DATA.projects.find(p => p.id === id);
+    if (!p) return;
+    const lang = window.i18n?.currentLang || 'en';
+    const ar = lang === 'ar';
+    const backdrop = document.getElementById('projectModalBackdrop');
+    const container = document.getElementById('modalContentContainer');
+    if (!backdrop || !container) return;
+    container.innerHTML = `<div class="modal-top-bar"><div>
+      <span class="project-badge-tag" style="margin-bottom:8px;display:inline-block">${p.badge}</span>
+      <h2 style="font-size:1.4rem;color:var(--text-main)">${p.title[lang]}</h2>
+      <div style="font-family:var(--font-mono);font-size:.82rem;color:var(--color-primary)">${p.tagline[lang]}</div>
+      </div><button class="modal-close-trigger" id="modalCloseBtn" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+      <div class="modal-content-scroll"><p class="modal-summary">${p.summary[lang]}</p>
+        <div class="modal-architecture-box"><div class="box-label">${window.i18n.t('modal.architectureFlow')}</div><code>${p.steps[lang]}</code></div>
+        <h4 class="modal-heading">${window.i18n.t('modal.technicalSpecs')}</h4>
+        <table class="modal-data-table"><tbody>
+        <tr><th>${ar ? 'المخرج' : 'Output'}</th><td>${p.outputs[lang]}</td></tr>
+        <tr><th>${ar ? 'المجال' : 'Area'}</th><td>${p.tagline[lang]}</td></tr>
+        </tbody></table>
+        <h4 class="modal-heading">${window.i18n.t('modal.keyHighlights')}</h4>
+        <div class="modal-points-list"><div class="modal-point-item"><span class="point-bullet">↗</span><span>${p.ability[lang]}</span></div></div>
+        ${p.link ? `<a class="btn btn-primary project-link" href="${p.link}" target="_blank" rel="noopener">${ar ? 'فتح المشروع المنشور' : 'Open published project'} ↗</a>` : ''}
+      </div>`;
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('modalCloseBtn').addEventListener('click', () => this.closeProjectModal());
+    document.getElementById('modalCloseBtn').focus();
+  }
+
+  closeProjectModal() {
+    const backdrop = document.getElementById('projectModalBackdrop');
+    if (backdrop) backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* ========================================================================
+     5. SKILLS MATRIX TABS
+     ======================================================================== */
+  renderSkills() {
+    const tabsContainer = document.getElementById('skillsTabsContainer');
+    const itemsContainer = document.getElementById('skillsItemsContainer');
+    if (!tabsContainer || !itemsContainer) return;
+    const lang = window.i18n ? window.i18n.currentLang : 'en';
+
+    const skillKeys = Object.keys(PORTFOLIO_DATA.skills);
+
+    tabsContainer.innerHTML = skillKeys.map(key => {
+      const sk = PORTFOLIO_DATA.skills[key];
+      const isActive = key === this.currentSkillTab;
+      return `
+        <button class="domain-pill-btn ${isActive ? 'active' : ''}" data-skill-tab="${key}">
+          <span>${sk.categoryName[lang]}</span>
+        </button>
+      `;
+    }).join('');
+
+    const activeDomain = PORTFOLIO_DATA.skills[this.currentSkillTab];
+    if (activeDomain) {
+      itemsContainer.innerHTML = activeDomain.items.map(item => `
+        <div class="skill-chip-card">
+          <span class="skill-title-text">${item.name}</span>
+          <span class="skill-level-badge">${item.level}</span>
+        </div>
+      `).join('');
+    }
+
+    tabsContainer.querySelectorAll('.domain-pill-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.currentSkillTab = btn.dataset.skillTab;
+        this.renderSkills();
+      });
+    });
+  }
+
+  /* ========================================================================
+     6. MALAZ ACADEMY HUB (262 LECTURES)
+     ======================================================================== */
+  renderMalazAcademy() {
+    const container = document.getElementById('malazCategoriesGrid');
+    if (!container) return;
+    const lang = window.i18n ? window.i18n.currentLang : 'en';
+    const academy = PORTFOLIO_DATA.malazAcademy;
+
+    container.innerHTML = academy.categories.map(cat => `
+      <div class="syllabus-card">
+        <h4 class="syllabus-card-heading">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          ${cat.name[lang]}
+        </h4>
+        <div class="syllabus-items-list">
+          ${cat.topics.map(t => `
+            <div class="syllabus-item-row">${t}</div>
+          `).join('')}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  /* ========================================================================
+     7. TRONICSHUB SERVICES
+     ======================================================================== */
+  renderTronicsHubServices() {
+    const container = document.getElementById('servicesGrid');
+    if (!container) return;
+    const lang = window.i18n ? window.i18n.currentLang : 'en';
+
+    const icons = {
+      cpu: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>',
+      layers: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>',
+      award: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>',
+      'book-open': '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
+    };
+
+    container.innerHTML = PORTFOLIO_DATA.tronicshub.services.map(s => `
+      <div class="service-bento-card">
+        <div class="service-icon-box">
+          ${icons[s.icon] || icons.cpu}
+        </div>
+        <h4 class="service-card-title">${s.title[lang]}</h4>
+        <p class="service-card-text">${s.desc[lang]}</p>
+      </div>
+    `).join('');
+  }
+
+  /* ========================================================================
+     8. EVENT BINDINGS & INTERACTIONS
+     ======================================================================== */
+  bindEvents() {
+    // Topbar Theme Toggle Button
+    const themeBtn = document.getElementById('themeToggleBtn');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        this.toggleTheme();
+      });
+    }
+
+    // Project Category Filters
+    const filterBtns = document.querySelectorAll('.filter-pill');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        this.currentProjectFilter = btn.dataset.filter || 'all';
+        this.renderProjects();
+      });
+    });
+
+    // Modal Backdrop Close
+    const modalBackdrop = document.getElementById('projectModalBackdrop');
+    if (modalBackdrop) {
+      modalBackdrop.addEventListener('click', (e) => {
+        if (e.target === modalBackdrop) this.closeProjectModal();
+      });
+    }
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') this.closeProjectModal();
+    });
+
+    // Mobile Hamburger Navigation Drawer
+    const mobileToggle = document.getElementById('mobileNavToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+
+      mobileMenu.querySelectorAll('.mobile-nav-item').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+        });
+      });
+    }
+
+    // Direct Copy to Clipboard Handlers
+    const copyTriggers = document.querySelectorAll('[data-copy]');
+    copyTriggers.forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const text = el.dataset.copy;
+        (navigator.clipboard?.writeText ? navigator.clipboard.writeText(text) : Promise.reject()).then(() => { this.showToast(window.i18n.t('contact.copySuccess')); }).catch(() => { const t=document.createElement('textarea'); t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();this.showToast(window.i18n.t('contact.copySuccess')); });
+      });
+    });
+  }
+
+  /* ========================================================================
+     9. SCROLLSPY (ACTIVE NAV LINK HIGHLIGHT)
+     ======================================================================== */
+  setupScrollSpy() {
+    const navItems = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 140;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
+
+        if (scrollY >= top && scrollY < top + height) {
+          navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${id}`) {
+              item.classList.add('active');
+            }
+          });
+        }
+      });
+    });
+  }
+
+  /* ========================================================================
+     10. LIVE TWEAKS PANEL (As recommended in SKILL.md)
+     ======================================================================== */
+  setupTweaksPanel() {
+    const trigger = document.getElementById('tweaksTriggerBtn');
+    const windowEl = document.getElementById('tweaksWindow');
+    const closeBtn = document.getElementById('tweaksCloseBtn');
+
+    if (trigger && windowEl) {
+      trigger.addEventListener('click', () => {
+        windowEl.classList.toggle('open');
+      });
+    }
+
+    if (closeBtn && windowEl) {
+      closeBtn.addEventListener('click', () => {
+        windowEl.classList.remove('open');
+      });
+    }
+
+    // Accent Palette Swatches
+    const swatches = document.querySelectorAll('.swatch-btn');
+    swatches.forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        swatches.forEach(s => s.classList.remove('active'));
+        swatch.classList.add('active');
+        const color = swatch.dataset.color;
+
+        if (color === 'sapphire') {
+          document.documentElement.style.setProperty('--color-primary', '#38bdf8');
+          document.documentElement.style.setProperty('--color-primary-bright', '#7dd3fc');
+          document.documentElement.style.setProperty('--color-primary-glow', 'rgba(56, 189, 248, 0.22)');
+          document.documentElement.style.setProperty('--color-primary-gradient', 'linear-gradient(135deg, #38bdf8 0%, #6366f1 100%)');
+        } else if (color === 'emerald') {
+          document.documentElement.style.setProperty('--color-primary', '#34d399');
+          document.documentElement.style.setProperty('--color-primary-bright', '#6ee7b7');
+          document.documentElement.style.setProperty('--color-primary-glow', 'rgba(52, 211, 153, 0.22)');
+          document.documentElement.style.setProperty('--color-primary-gradient', 'linear-gradient(135deg, #34d399 0%, #06b6d4 100%)');
+        } else if (color === 'violet') {
+          document.documentElement.style.setProperty('--color-primary', '#a78bfa');
+          document.documentElement.style.setProperty('--color-primary-bright', '#c4b5fd');
+          document.documentElement.style.setProperty('--color-primary-glow', 'rgba(167, 139, 250, 0.22)');
+          document.documentElement.style.setProperty('--color-primary-gradient', 'linear-gradient(135deg, #a78bfa 0%, #ec4899 100%)');
+        } else if (color === 'rose') {
+          document.documentElement.style.setProperty('--color-primary', '#fb7185');
+          document.documentElement.style.setProperty('--color-primary-bright', '#fda4af');
+          document.documentElement.style.setProperty('--color-primary-glow', 'rgba(251, 113, 133, 0.22)');
+          document.documentElement.style.setProperty('--color-primary-gradient', 'linear-gradient(135deg, #fb7185 0%, #f43f5e 100%)');
+        }
+      });
+    });
+  }
+
+  showToast(message) {
+    let toast = document.getElementById('globalToast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'globalToast';
+      toast.className = 'toast-bubble';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3200);
+  }
+}
+
+// Global Toast helper
+window.showToast = (msg) => {
+  if (window.portfolioAppInstance) {
+    window.portfolioAppInstance.showToast(msg);
+  }
+};
+
+// Start application
+window.addEventListener('DOMContentLoaded', () => {
+  window.portfolioAppInstance = new PortfolioApp();
+});
+</script>
+</body>
+</html>
